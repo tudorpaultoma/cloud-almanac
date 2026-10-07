@@ -124,7 +124,8 @@
   }).join('');
 
   function render() {
-    var id = (location.hash.replace(/^#\/?/, '') || 'infrastructure').split('?')[0];
+    var parts = (location.hash.replace(/^#\/?/, '') || 'infrastructure').split('?')[0].split('/');
+    var id = parts[0], sub = parts[1] || '';
     var p = PAGES[id] || PAGES.infrastructure;
 
     nav.querySelectorAll('a').forEach(function (a) {
@@ -133,6 +134,16 @@
     });
     crumb.textContent = p.title;
     document.title = p.title + ' · Cloud Almanac';
+
+    var view = (window.CA_VIEWS || {})[p.id];
+    if (view) {
+      var subTitle = view(content, sub);
+      crumb.innerHTML = '<a href="#/' + p.id + '">' + esc(p.title) + '</a>' +
+        (subTitle ? '<span class="sep">/</span><span>' + esc(subTitle) + '</span>' : '');
+      if (subTitle) document.title = subTitle + ' · ' + p.title + ' · Cloud Almanac';
+      app.classList.remove('nav-open');
+      return;
+    }
 
     var chips = PROVIDERS.map(function (v) {
       return '<span class="chip"><i aria-hidden="true">' + esc(v.mono) + '</i>' + esc(v.name) + '</span>';
