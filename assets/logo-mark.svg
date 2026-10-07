@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <style>
+    .t { fill: #4F79A3 } .b { fill: #22496F }
+    @media (prefers-color-scheme: dark) { .t { fill: #A9C8E4 } .b { fill: #6E9BC6 } }
+  </style>
+  <rect class="t" x="15" y="12.5" width="45" height="9" rx="4.5"/>
+  <rect class="b" x="4" y="27.5" width="52" height="9" rx="4.5"/>
+  <rect class="b" x="16.5" y="42.5" width="27" height="9" rx="4.5"/>
+</svg>
