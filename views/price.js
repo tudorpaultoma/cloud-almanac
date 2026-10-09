@@ -42,7 +42,7 @@
   /* ---------- shared pieces ---------- */
 
   function toolbar(ds, sub) {
-    var tabs = [{ id: 'overview', tab: 'Overview' }].concat(ds.pages);
+    var tabs = [{ id: 'overview', tab: 'Overview' }].concat(ds.pages, [{ id: 'catalogue', tab: 'All services' }]);
     return '' +
       '<div class="pc-bar">' +
         '<label class="pc-select"><span class="muted">Comparison</span>' +
@@ -182,6 +182,86 @@
       notes(p.notes, p.source);
   }
 
+  /* ---------- catalogue ---------- */
+
+  var STATUS = {
+    ok:     { label: 'Match',        hint: 'Close 1:1 match' },
+    review: { label: 'Review',       hint: 'Partial match or different billing model — needs manual review' },
+    none:   { label: 'No match',     hint: 'No AWS equivalent' },
+    skip:   { label: 'Out of scope', hint: 'Not a metered cloud service' }
+  };
+  var catFilter = { status: 'all', category: 'all', q: '' };
+
+  function catalogue(cat) {
+    var counts = { ok: 0, review: 0, none: 0, skip: 0, priced: 0, total: 0 };
+    cat.categories.forEach(function (c) {
+      c.items.forEach(function (it) {
+        counts[it[2]]++; counts.total++;
+        if (it[4]) counts.priced++;
+      });
+    });
+
+    var stats = '<div class="cat-stats">' +
+      '<span><b>' + counts.total + '</b> services</span>' +
+      '<span class="pill ok">' + counts.ok + ' match</span>' +
+      '<span class="pill review">' + counts.review + ' review</span>' +
+      '<span class="pill none">' + counts.none + ' no match</span>' +
+      '<span class="pill skip">' + counts.skip + ' out of scope</span>' +
+      '<span class="pill priced">' + counts.priced + ' priced</span>' +
+    '</div>';
+
+    var seg = ['all', 'ok', 'review', 'none'].map(function (s) {
+      return '<button data-status="' + s + '"' + (catFilter.status === s ? ' aria-pressed="true"' : '') + '>' +
+        (s === 'all' ? 'All' : STATUS[s].label) + '</button>';
+    }).join('');
+
+    var cats = ['all'].concat(cat.categories.map(function (c) { return c.name; }));
+    var sel = cats.map(function (c) {
+      return '<option' + (catFilter.category === c ? ' selected' : '') + '>' + (c === 'all' ? 'All categories' : esc(c)) + '</option>';
+    }).join('');
+
+    var rows = '';
+    cat.categories.forEach(function (c) {
+      if (catFilter.category !== 'all' && c.name !== catFilter.category) return;
+      var items = c.items.filter(function (it) {
+        if (catFilter.status !== 'all' && it[2] !== catFilter.status) return false;
+        if (catFilter.q) {
+          var q = catFilter.q.toLowerCase();
+          return it[0].toLowerCase().indexOf(q) >= 0 || (it[1] || '').toLowerCase().indexOf(q) >= 0;
+        }
+        return true;
+      });
+      if (!items.length) return;
+      rows += '<tr class="cat-cat"><th colspan="4" scope="colgroup">' + esc(c.name) + ' <span class="muted">' + items.length + '</span></th></tr>';
+      items.forEach(function (it) {
+        var st = STATUS[it[2]];
+        rows += '<tr>' +
+          '<th scope="row">' + esc(it[0]) + '</th>' +
+          '<td>' + (it[1] ? esc(it[1]) : '<span class="muted">—</span>') +
+            (it[3] ? '<span class="cat-note">' + esc(it[3]) + '</span>' : '') + '</td>' +
+          '<td><span class="pill ' + it[2] + '" title="' + esc(st.hint) + '">' + st.label + '</span></td>' +
+          '<td>' + (it[4] ? '<a class="cat-link" href="#/price/' + it[4] + '">Priced</a>' : '<span class="muted">Pending</span>') + '</td>' +
+        '</tr>';
+      });
+    });
+    if (!rows) rows = '<tr><td colspan="4" class="muted" style="text-align:center;padding:24px">No services match these filters.</td></tr>';
+
+    return '' +
+      '<div class="pc-title"><h2>All services · ' + esc(cat.a) + ' vs ' + esc(cat.b) + '</h2>' +
+      '<p class="muted">Full product catalogue with equivalence mapping. Rows marked <b>Review</b> are the manual-review queue; <b>Priced</b> rows link to the detailed comparison. Source: ' + esc(cat.source) + '.</p></div>' +
+      stats +
+      '<div class="cat-bar">' +
+        '<div class="seg" role="group" aria-label="Filter by match status">' + seg + '</div>' +
+        '<label class="pc-select"><span class="muted">Category</span><select class="cat-cat-select" aria-label="Filter by category">' + sel + '</select></label>' +
+        '<input class="cat-search" type="search" placeholder="Filter by name…" value="' + esc(catFilter.q) + '" aria-label="Filter by name">' +
+      '</div>' +
+      '<section class="panel"><div class="tbl-wrap"><table class="ptbl cat-tbl">' +
+        '<thead><tr><th scope="col">' + esc(cat.a) + ' service</th><th scope="col">' + esc(cat.b) + ' equivalent</th><th scope="col" style="width:110px">Match</th><th scope="col" style="width:90px">Pricing</th></tr></thead>' +
+        '<tbody>' + rows + '</tbody></table></div></section>' +
+      takeaway('The Review and No match rows are the manual-review queue — confirm the AWS equivalent (or confirm there is none), then pricing can be filled in batch by batch in the same card format as the priced pages.') +
+      notes(['Mapping source: Tencent Cloud International product index (' + cat.source + '). AWS equivalents from the AWS service catalogue.', 'Pricing is imported per service only from sourced material (e.g. comparison decks); "Pending" rows have no prices yet by design.'], null);
+  }
+
   /* ---------- entry ---------- */
 
   var sortMode = 'deck';
@@ -189,19 +269,39 @@
   function render(el, sub) {
     var ds = ((window.CA_DATA || {}).price || [])[0];
     if (!ds) { el.innerHTML = '<p class="muted">No price data loaded.</p>'; return; }
-    var page = null;
+    var page = null, isCatalogue = sub === 'catalogue';
     ds.pages.forEach(function (p) { if (p.id === sub) page = p; });
-    if (!page) sub = 'overview';
+    if (!page && !isCatalogue) sub = 'overview';
+
+    var body;
+    if (isCatalogue) {
+      var cat = ((window.CA_DATA || {}).catalogue || [])[0];
+      body = cat ? catalogue(cat) : '<p class="muted">Catalogue data not loaded.</p>';
+    } else if (page) {
+      body = servicePage(ds, page);
+    } else {
+      body = overview(ds, sortMode);
+    }
 
     el.innerHTML = '' +
       '<div class="page-head"><div><h1>Price</h1><p>Like-for-like list-price comparison per service, scenario by scenario.</p></div></div>' +
-      toolbar(ds, sub) +
-      '<div class="pc-body">' + (page ? servicePage(ds, page) : overview(ds, sortMode)) + '</div>';
+      toolbar(ds, isCatalogue ? 'catalogue' : sub) +
+      '<div class="pc-body">' + body + '</div>';
 
-    el.querySelectorAll('.seg button').forEach(function (b) {
+    el.querySelectorAll('.seg button[data-sort]').forEach(function (b) {
       b.addEventListener('click', function () { sortMode = b.dataset.sort; render(el, 'overview'); });
     });
-    return page ? page.tab : 'Overview';
+    if (isCatalogue) {
+      el.querySelectorAll('.seg button[data-status]').forEach(function (b) {
+        b.addEventListener('click', function () { catFilter.status = b.dataset.status; render(el, 'catalogue'); });
+      });
+      el.querySelector('.cat-cat-select').addEventListener('change', function (e) { catFilter.category = e.target.value; render(el, 'catalogue'); });
+      var s = el.querySelector('.cat-search');
+      s.addEventListener('input', function (e) { catFilter.q = e.target.value; render(el, 'catalogue'); });
+      s.focus();
+      s.setSelectionRange(s.value.length, s.value.length);
+    }
+    return isCatalogue ? 'All services' : page ? page.tab : 'Overview';
   }
 
   (window.CA_VIEWS = window.CA_VIEWS || {}).price = render;

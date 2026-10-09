@@ -18,8 +18,11 @@
   --logo-base: #22496F;
   --cheaper: #1B5E50;
   --cheaper-fill: #5E9C8D;
+  --cheaper-soft: #E0EEEA;
   --dearer: #8A3B14;
   --dearer-fill: #C27C55;
+  --warn: #8A5B07;
+  --warn-soft: #F7ECD6;
   --track: #E3E7ED;
   --shadow: 0 1px 2px rgba(16, 24, 40, .06);
   color-scheme: light;
@@ -43,8 +46,11 @@
   --logo-base: #6E9BC6;
   --cheaper: #8ED0BE;
   --cheaper-fill: #4E9483;
+  --cheaper-soft: #1C332C;
   --dearer: #F0AE87;
   --dearer-fill: #B5704A;
+  --warn: #EFC583;
+  --warn-soft: #33290F;
   --track: #232B37;
   --shadow: none;
   color-scheme: dark;
@@ -303,6 +309,29 @@ a.rc-row:hover { background: var(--surface-2); }
 .pc-notes ul { margin: 0; padding: 0 18px 16px 34px; display: grid; gap: 6px; font-size: 12.5px; color: var(--text-2); }
 .pc-notes .src { list-style: none; margin-left: -16px; padding-top: 6px; border-top: 1px solid var(--border); color: var(--muted); }
 .pc-notes .src b { color: var(--text-2); font-weight: 500; margin-right: 4px; }
+
+/* Catalogue tab */
+.pill { display: inline-flex; align-items: center; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 500; white-space: nowrap; }
+.pill.ok { background: var(--accent-soft); color: var(--accent-text); }
+.pill.review { background: var(--warn-soft); color: var(--warn); }
+.pill.none { background: var(--surface-2); color: var(--muted); box-shadow: inset 0 0 0 1px var(--border); }
+.pill.skip { background: transparent; color: var(--muted); box-shadow: inset 0 0 0 1px var(--border); }
+.pill.priced { background: var(--cheaper-soft); color: var(--cheaper); }
+
+.cat-stats { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 18px; font-size: 13px; color: var(--text-2); margin-bottom: 14px; }
+.cat-stats b { font-weight: 600; }
+.cat-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 16px; }
+.cat-search {
+  font: 400 13px/1 "Inter", sans-serif; color: var(--text);
+  height: 36px; width: 200px; padding: 0 12px;
+  border: 1px solid var(--border-strong); border-radius: 8px; background: var(--surface);
+}
+.cat-search::placeholder { color: var(--muted); }
+.cat-tbl th[scope="colgroup"] { background: var(--surface-2); font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-top: 8px; padding-bottom: 8px; }
+.cat-tbl tbody th { color: var(--text); font-weight: 500; }
+.cat-note { display: block; font-size: 12px; color: var(--muted); }
+.cat-link { color: var(--accent-text); font-weight: 500; }
+.cat-link:hover { text-decoration: underline; }
 
 @media (max-width: 1100px) {
   .sc-grid { grid-template-columns: 1fr; }
