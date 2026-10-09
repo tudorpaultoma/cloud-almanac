@@ -26,11 +26,11 @@
       ['Cloud Bare Metal', 'EC2 bare-metal instance types', 'review', 'Bare metal is an instance option on AWS, not a service'],
       ['Auto Scaling', 'EC2 Auto Scaling', 'ok'],
       ['Tencent Cloud Automation Tools', 'Systems Manager (Run Command / Automation)', 'review'],
-      ['Batch Compute', 'AWS Batch', 'ok'],
+      ['Batch Compute', 'Batch', 'ok'],
       ['Hyper Computing Cluster', 'EC2 HPC clusters (EFA)', 'review'],
-      ['Cloud Dedicated Cluster', 'AWS Outposts', 'review', 'On-prem dedicated; scope differs'],
-      ['Edge Zone', 'AWS Local Zones', 'review'],
-      ['Cloud Dedicated Zone', 'AWS Dedicated Local Zones', 'review']
+      ['Cloud Dedicated Cluster', 'Outposts', 'review', 'On-prem dedicated; scope differs'],
+      ['Edge Zone', 'Local Zones', 'review'],
+      ['Cloud Dedicated Zone', 'Dedicated Local Zones', 'review']
     ]},
     { name: 'Containers & serverless', items: [
       ['Tencent Kubernetes Engine (TKE)', 'EKS', 'ok'],
@@ -131,18 +131,18 @@
     ]},
     { name: 'Security', items: [
       ['Cloud Firewall (CFW)', 'Network Firewall', 'ok', null, 'cfw'],
-      ['Web Application Firewall', 'AWS WAF', 'ok'],
+      ['Web Application Firewall', 'WAF', 'ok'],
       ['Host Security', 'GuardDuty + Inspector', 'review', 'Two AWS services cover it'],
       ['Container Security Service', 'GuardDuty (EKS/container partial)', 'review'],
       ['Cloud Security Center', 'Security Hub', 'review'],
       ['Vulnerability Scan Service', 'Inspector', 'review'],
-      ['Firewall Manager', 'AWS Firewall Manager', 'ok'],
+      ['Firewall Manager', 'Firewall Manager', 'ok'],
       ['Key Management Service (KMS)', 'KMS', 'ok'],
       ['Secrets Manager', 'Secrets Manager', 'ok'],
-      ['Bastion Host', 'Systems Manager Session Manager', 'review', 'AWS has no appliance; SSM covers the workflow'],
+      ['Bastion Host', 'Systems Manager Session Manager', 'review', 'has no appliance; SSM covers the workflow'],
       ['Data Security Audit', 'Macie', 'review'],
       ['Data Security Governance Center', 'Macie', 'review'],
-      ['CAPTCHA', 'AWS WAF CAPTCHA', 'ok'],
+      ['CAPTCHA', 'WAF CAPTCHA', 'ok'],
       ['Risk Identification (RCE)', null, 'none', 'Amazon Fraud Detector retired in 2025'],
       ['Game Security', null, 'none'],
       ['Security Credential Service', 'IAM STS', 'ok'],
@@ -187,15 +187,15 @@
       ['Cloud Automated Testing (synthetic probes)', 'CloudWatch Synthetics', 'ok'],
       ['Managed Prometheus (TMP)', 'Managed Service for Prometheus', 'ok'],
       ['Managed Grafana (TCMG)', 'Managed Grafana', 'ok', null, 'tcmg'],
-      ['Health Dashboard', 'AWS Health Dashboard', 'ok'],
-      ['Cloud Load Testing (PTS)', 'Distributed Load Testing on AWS', 'review', 'AWS ships this as a solution, not a service'],
+      ['Health Dashboard', 'Health Dashboard', 'ok'],
+      ['Cloud Load Testing (PTS)', 'Distributed Load Testing on AWS', 'review', 'ships this as a solution, not a service'],
       ['Cloud Advisor', 'Trusted Advisor', 'ok'],
       ['Chaos Engineering (chaos drills)', 'Fault Injection Service', 'ok']
     ]},
     { name: 'Management & governance', items: [
       ['Cloud Access Management (CAM)', 'IAM', 'ok'],
       ['CloudAudit', 'CloudTrail', 'ok'],
-      ['Config Audit', 'AWS Config', 'ok'],
+      ['Config Audit', 'Config', 'ok'],
       ['Group Account Management', 'Organizations', 'ok'],
       ['Control Center', 'Control Tower', 'review'],
       ['Tags', 'Resource Groups / Tag Editor', 'ok'],
@@ -203,15 +203,15 @@
       ['Resource Center', 'Resource Explorer', 'ok'],
       ['Billing Center', 'Cost Explorer / Billing console', 'ok'],
       ['Cloud Migration', 'Application Migration Service (MGN)', 'review'],
-      ['Terraform automation support', 'AWS provider / IaC', 'skip', 'Tooling support, not a service']
+      ['Terraform automation support', 'provider / IaC', 'skip', 'Tooling support, not a service']
     ]},
     { name: 'Developer tools', items: [
       ['Cloud Native Build (CNB)', 'CodeBuild + CodePipeline', 'review'],
       ['Cloud Code Analysis', 'CodeGuru Reviewer', 'review', 'CodeGuru largely retired'],
       ['CodeBuddy (AI coding)', 'Amazon Q Developer', 'review'],
       ['Super App as a Service', null, 'none'],
-      ['Tencent Cloud API / CLI / SDK', 'AWS API / CLI / SDKs', 'skip'],
-      ['Cloud Marketplace', 'AWS Marketplace', 'ok']
+      ['Tencent Cloud API / CLI / SDK', 'API / CLI / SDKs', 'skip'],
+      ['Cloud Marketplace', 'Marketplace', 'ok']
     ]},
     { name: 'Communication & enterprise', items: [
       ['Short Message Service', 'End User Messaging SMS', 'ok', 'SNS SMS folded into End User Messaging'],
