@@ -310,6 +310,17 @@ a.rc-row:hover { background: var(--surface-2); }
 .pc-notes .src { list-style: none; margin-left: -16px; padding-top: 6px; border-top: 1px solid var(--border); color: var(--muted); }
 .pc-notes .src b { color: var(--text-2); font-weight: 500; margin-right: 4px; }
 
+/* Category cards */
+.cc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; margin-bottom: 16px; }
+.cc { padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; }
+.cc-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.cc-head b { font-weight: 500; font-size: 14px; }
+.cc-aws { font-size: 13px; }
+.cc-note { margin: 0; font-size: 12px; color: var(--muted); }
+.cc-price { margin-top: auto; padding-top: 10px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 13px; }
+.cc-delta { font-weight: 600; font-variant-numeric: tabular-nums; }
+.cc-med-l { font-size: 11px; font-weight: 400; color: var(--muted); }
+
 /* Catalogue tab */
 .pill { display: inline-flex; align-items: center; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 500; white-space: nowrap; }
 .pill.ok { background: var(--accent-soft); color: var(--accent-text); }

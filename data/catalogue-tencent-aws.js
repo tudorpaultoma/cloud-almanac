@@ -19,7 +19,7 @@
   source: 'intl.cloud.tencent.com product index · 9 Oct 2026',
   categories: [
     { name: 'Compute', items: [
-      ['Cloud Virtual Machine (CVM)', 'EC2', 'ok', 'Detail pending — compute deck not imported'],
+      ['Cloud Virtual Machine (CVM)', 'EC2', 'ok', 'Detail pending — compute deck not imported', 'cvm'],
       ['Tencent Cloud Lighthouse', 'Lightsail', 'ok'],
       ['Cloud GPU Service', 'EC2 P/G accelerated instances', 'review', 'Family-level match; no single AWS service'],
       ['CVM Dedicated Host', 'EC2 Dedicated Hosts', 'ok'],
@@ -50,15 +50,15 @@
       ['TDMQ for Apache Pulsar', null, 'none', 'No managed Pulsar on AWS'],
       ['TDMQ for MQTT', 'IoT Core (MQTT broker)', 'review', 'Different scope: IoT vs general messaging'],
       ['TDMQ for CMQ', 'SQS + SNS', 'review'],
-      ['EventBridge', 'Amazon EventBridge', 'ok', null, 'observability']
+      ['EventBridge', 'Amazon EventBridge', 'ok', null, 'eb']
     ]},
     { name: 'Storage', items: [
-      ['Cloud Object Storage (COS)', 'S3', 'ok', null, 'storage'],
-      ['Cloud Block Storage (CBS)', 'EBS', 'ok', null, 'storage'],
+      ['Cloud Object Storage (COS)', 'S3', 'ok', null, 'cos'],
+      ['Cloud Block Storage (CBS)', 'EBS', 'ok', null, 'cbs'],
       ['Cloud File Storage (CFS)', 'EFS', 'ok'],
       ['Cloud HDFS', null, 'review', 'Closest: HDFS on EMR'],
       ['GooseFS (data lake accelerator)', 'FSx for Lustre', 'review'],
-      ['Cloud Log Service (CLS)', 'CloudWatch Logs', 'ok', null, 'observability'],
+      ['Cloud Log Service (CLS)', 'CloudWatch Logs', 'ok', null, 'cls'],
       ['Cloud Infinite (media processing on COS)', null, 'review', 'Closest: S3 Object Lambda + MediaConvert'],
       ['Smart Media Hosting', null, 'none'],
       ['LighthouseCOS', 'Lightsail object storage', 'review']
@@ -85,10 +85,10 @@
     ]},
     { name: 'Networking', items: [
       ['Virtual Private Cloud (VPC)', 'VPC', 'ok'],
-      ['Cloud Load Balancer (CLB)', 'ELB / ALB / NLB', 'ok', null, 'network'],
+      ['Cloud Load Balancer (CLB)', 'ELB / ALB / NLB', 'ok', null, 'clb'],
       ['Gateway Load Balancer', 'Gateway Load Balancer', 'ok'],
-      ['NAT Gateway', 'NAT Gateway', 'ok', null, 'network'],
-      ['VPN Connection', 'Site-to-Site VPN', 'ok', null, 'network'],
+      ['NAT Gateway', 'NAT Gateway', 'ok', null, 'nat'],
+      ['VPN Connection', 'Site-to-Site VPN', 'ok', null, 'vpn'],
       ['Direct Connect', 'Direct Connect', 'ok'],
       ['Cloud Connect Network (CCN)', 'Cloud WAN / Transit Gateway', 'review'],
       ['Peering Connection', 'VPC Peering', 'ok'],
@@ -111,12 +111,12 @@
       ['Global Office Access', 'Verified Access / Client VPN', 'review']
     ]},
     { name: 'Video & media', items: [
-      ['Cloud Streaming Services (LVB)', 'MediaLive + MediaPackage + CloudFront', 'review', null, 'streaming'],
+      ['Cloud Streaming Services (LVB)', 'MediaLive + MediaPackage + CloudFront', 'review', null, 'css'],
       ['StreamLive', 'MediaLive', 'ok'],
       ['StreamPackage', 'MediaPackage', 'ok'],
       ['StreamLink', 'MediaConnect', 'ok'],
-      ['Video on Demand (VOD)', 'S3 + MediaConvert + CloudFront', 'review', null, 'streaming'],
-      ['Media Processing Service (MPS)', 'MediaConvert', 'ok', null, 'streaming'],
+      ['Video on Demand (VOD)', 'S3 + MediaConvert + CloudFront', 'review', null, 'vod'],
+      ['Media Processing Service (MPS)', 'MediaConvert', 'ok', null, 'mps'],
       ['Live Recording', null, 'none'],
       ['Application Cloud Rendering', null, 'none'],
       ['Cloud Desktop (rendering)', 'WorkSpaces', 'review'],
@@ -130,7 +130,7 @@
       ['RTC industry editions (education, industrial)', null, 'skip', 'Industry bundles of TRTC']
     ]},
     { name: 'Security', items: [
-      ['Cloud Firewall (CFW)', 'Network Firewall', 'ok', null, 'firewall'],
+      ['Cloud Firewall (CFW)', 'Network Firewall', 'ok', null, 'cfw'],
       ['Web Application Firewall', 'AWS WAF', 'ok'],
       ['Host Security', 'GuardDuty + Inspector', 'review', 'Two AWS services cover it'],
       ['Container Security Service', 'GuardDuty (EKS/container partial)', 'review'],
@@ -183,10 +183,10 @@
     { name: 'Observability & operations', items: [
       ['Cloud Monitor (observability platform)', 'CloudWatch', 'ok'],
       ['Application Performance Monitoring', 'X-Ray + CloudWatch APM', 'review'],
-      ['RUM (front-end monitoring)', 'CloudWatch RUM', 'ok', null, 'observability'],
+      ['RUM (front-end monitoring)', 'CloudWatch RUM', 'ok', null, 'rum'],
       ['Cloud Automated Testing (synthetic probes)', 'CloudWatch Synthetics', 'ok'],
       ['Managed Prometheus (TMP)', 'Managed Service for Prometheus', 'ok'],
-      ['Managed Grafana (TCMG)', 'Managed Grafana', 'ok', null, 'observability'],
+      ['Managed Grafana (TCMG)', 'Managed Grafana', 'ok', null, 'tcmg'],
       ['Health Dashboard', 'AWS Health Dashboard', 'ok'],
       ['Cloud Load Testing (PTS)', 'Distributed Load Testing on AWS', 'review', 'AWS ships this as a solution, not a service'],
       ['Cloud Advisor', 'Trusted Advisor', 'ok'],

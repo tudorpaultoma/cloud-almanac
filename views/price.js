@@ -47,7 +47,10 @@
   /* ---------- shared pieces ---------- */
 
   function toolbar(cmp, sub) {
-    var tabs = [{ id: 'overview', tab: 'Overview' }].concat(cmp.pages, [{ id: 'catalogue', tab: 'All services' }]);
+    var cat = ((window.CA_DATA || {}).catalogue || [])[0];
+    var tabs = [{ id: 'overview', tab: 'Overview' }];
+    if (cat) cat.categories.forEach(function (c) { tabs.push({ id: catSlug(c.name), tab: c.name }); });
+    tabs.push({ id: 'catalogue', tab: 'All services' });
     return '' +
       '<div class="pc-bar">' +
         '<label class="pc-select"><span class="muted">Comparison</span>' +
@@ -217,7 +220,8 @@
   };
   var catFilter = { status: 'all', category: 'all', q: '' };
 
-  function catalogue(cat) {
+  function catalogue(cmp, cat) {
+    var svcs = svcIndex(cmp);
     var counts = { ok: 0, review: 0, none: 0, skip: 0, priced: 0, total: 0 };
     cat.categories.forEach(function (c) {
       c.items.forEach(function (it) {
@@ -259,12 +263,14 @@
       rows += '<tr class="cat-cat"><th colspan="4" scope="colgroup">' + esc(c.name) + ' <span class="muted">' + items.length + '</span></th></tr>';
       items.forEach(function (it) {
         var st = STATUS[it[2]];
+        var svc = it[4] ? svcs[it[4]] : null;
         rows += '<tr>' +
           '<th scope="row">' + esc(it[0]) + '</th>' +
           '<td>' + (it[1] ? esc(it[1]) : '<span class="muted">—</span>') +
             (it[3] ? '<span class="cat-note">' + esc(it[3]) + '</span>' : '') + '</td>' +
           '<td><span class="pill ' + it[2] + '" title="' + esc(st.hint) + '">' + st.label + '</span></td>' +
-          '<td>' + (it[4] ? '<a class="cat-link" href="#/price/' + it[4] + '">Priced</a>' : '<span class="muted">Pending</span>') + '</td>' +
+          '<td>' + (svc && svc.page ? '<a class="cat-link" href="#/price/' + svc.page + '">Priced</a>' :
+            svc ? '<span class="muted">Detail pending</span>' : '<span class="muted">Pending</span>') + '</td>' +
         '</tr>';
       });
     });
@@ -286,6 +292,49 @@
       notes(['Mapping source: Tencent Cloud International product index (' + cat.source + '). AWS equivalents from the AWS service catalogue.', 'Pricing is imported per service only from sourced material (e.g. comparison decks); "Pending" rows have no prices yet by design.'], null);
   }
 
+  /* ---------- category page (service cards) ---------- */
+
+  function catSlug(name) {
+    return 'cat-' + name.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  }
+
+  function svcIndex(cmp) {
+    var m = {};
+    cmp.services.forEach(function (s) { m[s.id] = s; });
+    return m;
+  }
+
+  function categoryPage(cmp, cat, catName) {
+    var c = cat.categories.find(function (x) { return x.name === catName; });
+    if (!c) return '<p class="muted">Unknown category.</p>';
+    var svcs = svcIndex(cmp);
+
+    var cards = c.items.map(function (it) {
+      var st = STATUS[it[2]];
+      var price = '';
+      if (it[4] && svcs[it[4]]) {
+        var svc = svcs[it[4]];
+        price = '<div class="cc-price">' +
+          '<span class="cc-delta ' + tone(svc.median) + '">' + pct(svc.median) + ' <span class="cc-med-l">median</span></span>' +
+          (svc.page ? '<a class="cat-link" href="#/price/' + svc.page + '">View pricing →</a>' : '<span class="muted">detail pending</span>') +
+        '</div>';
+      } else {
+        price = '<div class="cc-price"><span class="muted">Pricing pending</span></div>';
+      }
+      return '<section class="panel cc">' +
+        '<header class="cc-head"><b>' + esc(it[0]) + '</b><span class="pill ' + it[2] + '" title="' + esc(st.hint) + '">' + st.label + '</span></header>' +
+        '<div class="cc-aws"><span class="muted">AWS</span> ' + (it[1] ? esc(it[1]) : '<span class="muted">No equivalent</span>') + '</div>' +
+        (it[3] ? '<p class="cc-note">' + esc(it[3]) + '</p>' : '') +
+        price +
+      '</section>';
+    }).join('');
+
+    return '' +
+      '<div class="pc-title"><h2>' + esc(c.name) + '</h2>' +
+      '<p class="muted">' + c.items.length + ' services · cards with a delta are priced; the rest are queued.</p></div>' +
+      '<div class="cc-grid">' + cards + '</div>';
+  }
+
   /* ---------- entry ---------- */
 
   var sortMode = 'deck';
@@ -294,19 +343,26 @@
     var cmp = ((window.CA_DATA || {}).comparisons || [])[0];
     var book = ((window.CA_DATA || {}).pricebooks || [])[0];
     if (!cmp || !book) { el.innerHTML = '<p class="muted">No price data loaded.</p>'; return; }
+    var cat = ((window.CA_DATA || {}).catalogue || [])[0];
 
-    var page = null, isCatalogue = sub === 'catalogue';
+    var page = null, isCatalogue = sub === 'catalogue', catName = null;
     cmp.pages.forEach(function (p) { if (p.id === sub) page = p; });
-    if (!page && !isCatalogue) sub = 'overview';
+    if (cat) cat.categories.forEach(function (c) { if (catSlug(c.name) === sub) catName = c.name; });
+    if (!page && !isCatalogue && !catName) sub = 'overview';
 
-    var body;
+    var body, title;
     if (isCatalogue) {
-      var cat = ((window.CA_DATA || {}).catalogue || [])[0];
-      body = cat ? catalogue(cat) : '<p class="muted">Catalogue data not loaded.</p>';
+      body = cat ? catalogue(cmp, cat) : '<p class="muted">Catalogue data not loaded.</p>';
+      title = 'All services';
     } else if (page) {
       body = servicePage(cmp, book, page);
+      title = page.tab;
+    } else if (catName) {
+      body = categoryPage(cmp, cat, catName);
+      title = catName;
     } else {
       body = overview(cmp, book, sortMode);
+      title = 'Overview';
     }
 
     el.innerHTML = '' +
@@ -327,7 +383,7 @@
       s.focus();
       s.setSelectionRange(s.value.length, s.value.length);
     }
-    return isCatalogue ? 'All services' : page ? page.tab : 'Overview';
+    return title;
   }
 
   (window.CA_VIEWS = window.CA_VIEWS || {}).price = render;
