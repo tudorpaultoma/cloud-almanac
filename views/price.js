@@ -1,4 +1,4 @@
-/* Price module — overview + per-service comparison pages. */
+/* Price module — renders any provider pair from the normalized pricebook. */
 (function () {
   'use strict';
 
@@ -22,36 +22,46 @@
     var c = Math.max(-SCALE, Math.min(SCALE, d));
     return ((c + SCALE) / (2 * SCALE)) * 100;
   }
-  function median(arr) {
-    var s = arr.slice().sort(function (a, b) { return a - b; });
-    var m = Math.floor(s.length / 2);
-    return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+  function deltaOf(row, a, b) {
+    var pa = row.prices[a], pb = row.prices[b];
+    if (pa == null || pb == null) return null;
+    return Math.round((pa - pb) / pb * 100);
   }
 
-  function serviceRanges(ds) {
-    var map = {};
-    ds.pages.forEach(function (p) {
-      p.groups.forEach(function (g) {
-        (map[g.svc] = map[g.svc] || []);
-        g.rows.forEach(function (r) { map[g.svc].push(r.d); });
+  function svcRanges(cmp, book) {
+    var map = {}, a = cmp.pair[0], b = cmp.pair[1];
+    book.services.forEach(function (svc) {
+      svc.tiers.forEach(function (t) {
+        t.rows.forEach(function (r) {
+          var d = deltaOf(r, a, b);
+          if (d !== null) (map[svc.id] = map[svc.id] || []).push(d);
+        });
       });
     });
     return map;
   }
 
+  function prov(cmp, i) { return window.CA_DATA.providers[cmp.pair[i]]; }
+  function pairLabel(cmp) { return prov(cmp, 0).name + ' vs ' + prov(cmp, 1).name + ' · Frankfurt'; }
+
   /* ---------- shared pieces ---------- */
 
-  function toolbar(ds, sub) {
-    var tabs = [{ id: 'overview', tab: 'Overview' }].concat(ds.pages, [{ id: 'catalogue', tab: 'All services' }]);
+  function toolbar(cmp, sub) {
+    var tabs = [{ id: 'overview', tab: 'Overview' }].concat(cmp.pages, [{ id: 'catalogue', tab: 'All services' }]);
     return '' +
       '<div class="pc-bar">' +
         '<label class="pc-select"><span class="muted">Comparison</span>' +
-          '<select aria-label="Comparison set"><option>' + esc(ds.label) + '</option>' +
-          '<option disabled>More providers — coming soon</option></select></label>' +
+          '<select aria-label="Comparison pair">' +
+            '<option selected>' + esc(pairLabel(cmp)) + '</option>' +
+            '<option disabled>Azure vs AWS — not priced yet</option>' +
+            '<option disabled>Google Cloud vs AWS — not priced yet</option>' +
+            '<option disabled>Tencent Cloud vs Azure — not priced yet</option>' +
+            '<option disabled>Alibaba Cloud vs AWS — not priced yet</option>' +
+          '</select></label>' +
         '<div class="pc-meta">' +
-          '<span>' + esc(ds.basis) + '</span><span class="dot"></span>' +
-          '<span>' + esc(ds.currency + ' ' + ds.unit) + '</span><span class="dot"></span>' +
-          '<span>Retrieved ' + esc(ds.retrieved) + '</span>' +
+          '<span>' + esc(cmp.basis) + '</span><span class="dot"></span>' +
+          '<span>USD per month</span><span class="dot"></span>' +
+          '<span>Retrieved 2 Oct 2026</span>' +
         '</div>' +
       '</div>' +
       '<nav class="pc-tabs" aria-label="Price pages">' + tabs.map(function (t) {
@@ -59,11 +69,12 @@
       }).join('') + '</nav>';
   }
 
-  function legend(ds) {
+  function legend(cmp) {
+    var a = prov(cmp, 0), b = prov(cmp, 1);
     return '<div class="pc-legend">' +
-      '<span><i class="sw cheaper"></i>' + esc(ds.providers.a) + ' cheaper</span>' +
-      '<span><i class="sw dearer"></i>' + esc(ds.providers.b) + ' cheaper</span>' +
-      '<span class="muted">Δ = ' + esc(ds.providers.a) + ' list price vs ' + esc(ds.providers.b) + ' list price, same scenario</span>' +
+      '<span><i class="sw cheaper"></i>' + esc(a.name) + ' cheaper</span>' +
+      '<span><i class="sw dearer"></i>' + esc(b.name) + ' cheaper</span>' +
+      '<span class="muted">Δ = ' + esc(a.name) + ' list price vs ' + esc(b.name) + ' list price, same scenario</span>' +
     '</div>';
   }
 
@@ -80,12 +91,12 @@
 
   /* ---------- overview ---------- */
 
-  function overview(ds, sort) {
-    var ranges = serviceRanges(ds);
-    var svcs = ds.services.slice();
-    if (sort === 'median') svcs.sort(function (a, b) { return a.median - b.median; });
+  function overview(cmp, book, sort) {
+    var ranges = svcRanges(cmp, book);
+    var svcs = cmp.services.slice();
+    if (sort === 'median') svcs.sort(function (x, y) { return x.median - y.median; });
 
-    var kpis = ds.summary.kpis.map(function (k) {
+    var kpis = cmp.summary.kpis.map(function (k) {
       return '<div class="kpi"><div class="kpi-v">' + esc(k.value) + '</div>' +
         '<div class="kpi-l">' + esc(k.label) + '</div><div class="kpi-s">' + esc(k.sub) + '</div></div>';
     }).join('');
@@ -117,66 +128,80 @@
       '</' + endTag + '>';
     }).join('');
 
+    var a = prov(cmp, 0), b = prov(cmp, 1);
     return '' +
       '<div class="kpis">' + kpis + '</div>' +
       '<section class="panel pc-chart">' +
         '<div class="pc-chart-head">' +
-          '<div><h2>Executive summary · ' + esc(ds.providers.a) + ' vs ' + esc(ds.providers.b) + '</h2>' +
+          '<div><h2>Executive summary · ' + esc(a.name) + ' vs ' + esc(b.name) + '</h2>' +
           '<p class="muted">Every scenario per service; the dot marks the median. Select a service for detail.</p></div>' +
           '<div class="seg" role="group" aria-label="Sort">' +
             '<button data-sort="deck"' + (sort !== 'median' ? ' aria-pressed="true"' : '') + '>By category</button>' +
             '<button data-sort="median"' + (sort === 'median' ? ' aria-pressed="true"' : '') + '>By median</button>' +
           '</div>' +
         '</div>' +
-        legend(ds) +
+        legend(cmp) +
         '<div class="rc">' +
-          '<div class="rc-row rc-axis" aria-hidden="true"><div class="rc-name"><span>Service · ' + esc(ds.providers.a) + ' vs ' + esc(ds.providers.b) + '</span></div>' +
+          '<div class="rc-row rc-axis" aria-hidden="true"><div class="rc-name"><span>Service · ' + esc(a.name) + ' vs ' + esc(b.name) + '</span></div>' +
             '<div class="rc-track"><span style="left:0">\u2212' + SCALE + '%</span><span style="left:50%">0</span><span style="left:100%">+' + SCALE + '%</span></div>' +
             '<div class="rc-val">Median</div><div class="rc-rng">Range</div></div>' +
           rows +
         '</div>' +
       '</section>' +
-      takeaway(ds.summary.takeaway) +
-      notes([ds.summary.note].concat(ds.sources), null);
+      takeaway(cmp.summary.takeaway) +
+      notes([cmp.summary.note].concat(cmp.sources), null);
   }
 
   /* ---------- service page ---------- */
 
-  function servicePage(ds, p) {
+  function servicePage(cmp, book, p) {
+    var pa = cmp.pair[0], pb = cmp.pair[1];
+    var A = prov(cmp, 0), B = prov(cmp, 1);
     var st = p.stats;
     var stats = '' +
-      '<div class="kpi"><div class="kpi-v ' + tone(st.median.d) + '">' + pct(st.median.d) + '</div><div class="kpi-l">median across ' + st.median.n + ' comparisons</div><div class="kpi-s">' + esc(ds.providers.a) + ' list price vs ' + esc(ds.providers.b) + ' list price, same scenario</div></div>' +
+      '<div class="kpi"><div class="kpi-v ' + tone(st.median.d) + '">' + pct(st.median.d) + '</div><div class="kpi-l">median across ' + st.median.n + ' comparisons</div><div class="kpi-s">' + esc(A.name) + ' list price vs ' + esc(B.name) + ' list price, same scenario</div></div>' +
       '<div class="kpi"><div class="kpi-v ' + tone(st.best.d) + '">' + pct(st.best.d) + '</div><div class="kpi-l">best case on this page</div><div class="kpi-s">' + esc(st.best.label) + '</div></div>' +
       '<div class="kpi"><div class="kpi-v">' + esc(st.saving.value) + '</div><div class="kpi-l">largest saving per year</div><div class="kpi-s">' + esc(st.saving.label) + '</div></div>';
 
-    var groups = p.groups.map(function (g) {
-      var rows = g.rows.map(function (r) {
-        var w = Math.min(Math.abs(r.d), SCALE) / SCALE * 50;
-        var bar = '<span class="db-bar ' + tone(r.d) + '" style="' + (r.d < 0 ? 'right:50%' : 'left:50%') + ';width:' + w + '%"></span>';
-        return '<tr>' +
-          '<th scope="row">' + esc(r.s) + '</th>' +
-          '<td class="num">' + money(r.a) + '</td>' +
-          '<td class="num">' + money(r.b) + '</td>' +
-          '<td class="delta"><span class="db" aria-hidden="true"><span class="db-zero"></span>' + bar + '</span>' +
-            '<span class="dv ' + tone(r.d) + '">' + pct(r.d) + '</span></td>' +
-        '</tr>';
-      }).join('');
-      return '<section class="panel sc">' +
-        '<header class="sc-head"><div><h3>' + esc(g.title) + '</h3><p class="muted">' + esc(g.sub) + '</p></div></header>' +
-        '<div class="sc-skus">' +
-          '<div><span class="pv">' + esc(ds.providers.a) + '</span><b>' + esc(g.a) + '</b></div>' +
-          '<div><span class="pv">' + esc(ds.providers.b) + '</span><b>' + esc(g.b) + '</b></div>' +
-        '</div>' +
-        '<div class="tbl-wrap"><table class="ptbl">' +
-          '<thead><tr><th scope="col">Scenario</th><th scope="col" class="num">' + esc(ds.providers.a) + '</th><th scope="col" class="num">' + esc(ds.providers.b) + '</th><th scope="col" class="delta">Δ</th></tr></thead>' +
-          '<tbody>' + rows + '</tbody></table></div>' +
-      '</section>';
-    }).join('');
+    var groups = '';
+    p.serviceIds.forEach(function (sid) {
+      var svc = book.services.find(function (s) { return s.id === sid; });
+      if (!svc) return;
+      svc.tiers.forEach(function (t) {
+        var rows = t.rows.map(function (r) {
+          var va = r.prices[pa], vb = r.prices[pb];
+          var d = deltaOf(r, pa, pb);
+          var bar = '';
+          if (d !== null) {
+            var w = Math.min(Math.abs(d), SCALE) / SCALE * 50;
+            bar = '<span class="db-bar ' + tone(d) + '" style="' + (d < 0 ? 'right:50%' : 'left:50%') + ';width:' + w + '%"></span>';
+          }
+          return '<tr>' +
+            '<th scope="row">' + esc(r.label) + '</th>' +
+            '<td class="num">' + (va == null ? '<span class="muted">—</span>' : money(va)) + '</td>' +
+            '<td class="num">' + (vb == null ? '<span class="muted">—</span>' : money(vb)) + '</td>' +
+            '<td class="delta">' + (d === null ? '<span class="muted">—</span>' :
+              '<span class="db" aria-hidden="true"><span class="db-zero"></span>' + bar + '</span>' +
+              '<span class="dv ' + tone(d) + '">' + pct(d) + '</span>') + '</td>' +
+          '</tr>';
+        }).join('');
+        groups += '<section class="panel sc">' +
+          '<header class="sc-head"><div><h3>' + esc(t.label) + '</h3><p class="muted">' + esc(t.sub) + '</p></div></header>' +
+          '<div class="sc-skus">' +
+            '<div><span class="pv">' + esc(A.name) + '</span><b>' + esc(t.products[pa] || '—') + '</b></div>' +
+            '<div><span class="pv">' + esc(B.name) + '</span><b>' + esc(t.products[pb] || '—') + '</b></div>' +
+          '</div>' +
+          '<div class="tbl-wrap"><table class="ptbl">' +
+            '<thead><tr><th scope="col">Scenario</th><th scope="col" class="num">' + esc(A.name) + '</th><th scope="col" class="num">' + esc(B.name) + '</th><th scope="col" class="delta">Δ</th></tr></thead>' +
+            '<tbody>' + rows + '</tbody></table></div>' +
+        '</section>';
+      });
+    });
 
     return '' +
       '<div class="pc-title"><h2>' + esc(p.title) + '</h2><p class="muted">' + esc(p.sub) + '</p></div>' +
       '<div class="kpis">' + stats + '</div>' +
-      legend(ds) +
+      legend(cmp) +
       '<div class="sc-grid">' + groups + '</div>' +
       takeaway(p.takeaway) +
       notes(p.notes, p.source);
@@ -206,7 +231,6 @@
       '<span class="pill ok">' + counts.ok + ' match</span>' +
       '<span class="pill review">' + counts.review + ' review</span>' +
       '<span class="pill none">' + counts.none + ' no match</span>' +
-      '<span class="pill skip">' + counts.skip + ' out of scope</span>' +
       '<span class="pill priced">' + counts.priced + ' priced</span>' +
     '</div>';
 
@@ -267,10 +291,12 @@
   var sortMode = 'deck';
 
   function render(el, sub) {
-    var ds = ((window.CA_DATA || {}).price || [])[0];
-    if (!ds) { el.innerHTML = '<p class="muted">No price data loaded.</p>'; return; }
+    var cmp = ((window.CA_DATA || {}).comparisons || [])[0];
+    var book = ((window.CA_DATA || {}).pricebooks || [])[0];
+    if (!cmp || !book) { el.innerHTML = '<p class="muted">No price data loaded.</p>'; return; }
+
     var page = null, isCatalogue = sub === 'catalogue';
-    ds.pages.forEach(function (p) { if (p.id === sub) page = p; });
+    cmp.pages.forEach(function (p) { if (p.id === sub) page = p; });
     if (!page && !isCatalogue) sub = 'overview';
 
     var body;
@@ -278,14 +304,14 @@
       var cat = ((window.CA_DATA || {}).catalogue || [])[0];
       body = cat ? catalogue(cat) : '<p class="muted">Catalogue data not loaded.</p>';
     } else if (page) {
-      body = servicePage(ds, page);
+      body = servicePage(cmp, book, page);
     } else {
-      body = overview(ds, sortMode);
+      body = overview(cmp, book, sortMode);
     }
 
     el.innerHTML = '' +
       '<div class="page-head"><div><h1>Price</h1><p>Like-for-like list-price comparison per service, scenario by scenario.</p></div></div>' +
-      toolbar(ds, isCatalogue ? 'catalogue' : sub) +
+      toolbar(cmp, isCatalogue ? 'catalogue' : sub) +
       '<div class="pc-body">' + body + '</div>';
 
     el.querySelectorAll('.seg button[data-sort]').forEach(function (b) {
