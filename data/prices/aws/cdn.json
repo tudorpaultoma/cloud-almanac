@@ -1,0 +1,89 @@
+{
+  "provider": "aws",
+  "service": "cdn",
+  "region": "Frankfurt",
+  "regionDetail": "eu-central-1",
+  "currency": "USD",
+  "unit": "per month",
+  "retrieved": "2 Oct 2026",
+  "sources": [
+    {
+      "url": null,
+      "note": "AWS Price List API, eu-central-1, 2 Oct 2026 — via \"Cloud prices - Tencent vs AWS.pptx\""
+    }
+  ],
+  "skus": [
+    {
+      "tier": "10 TB delivered / month",
+      "label": "Traffic only · PAYG",
+      "price": 850,
+      "confidence": "verified"
+    },
+    {
+      "tier": "10 TB delivered / month",
+      "label": "Traffic + requests · PAYG *",
+      "price": 1138,
+      "confidence": "verified"
+    },
+    {
+      "tier": "10 TB delivered / month",
+      "label": "1-year traffic pack vs PAYG *",
+      "price": 850,
+      "confidence": "verified"
+    },
+    {
+      "tier": "50 TB delivered / month",
+      "label": "Traffic only · PAYG",
+      "price": 4051,
+      "confidence": "verified"
+    },
+    {
+      "tier": "50 TB delivered / month",
+      "label": "Traffic + requests · PAYG *",
+      "price": 5539,
+      "confidence": "verified"
+    },
+    {
+      "tier": "50 TB delivered / month",
+      "label": "1-year traffic pack vs PAYG *",
+      "price": 4051,
+      "confidence": "verified"
+    },
+    {
+      "tier": "100 TB delivered / month",
+      "label": "Traffic only · PAYG",
+      "price": 7075,
+      "confidence": "verified"
+    },
+    {
+      "tier": "100 TB delivered / month",
+      "label": "Traffic + requests · PAYG *",
+      "price": 10063,
+      "confidence": "verified"
+    },
+    {
+      "tier": "100 TB delivered / month",
+      "label": "1-year traffic pack vs PAYG *",
+      "price": 7075,
+      "confidence": "verified"
+    },
+    {
+      "tier": "500 TB delivered / month",
+      "label": "Traffic only · PAYG",
+      "price": 24147,
+      "confidence": "verified"
+    },
+    {
+      "tier": "500 TB delivered / month",
+      "label": "Traffic + requests · PAYG *",
+      "price": 39135,
+      "confidence": "verified"
+    },
+    {
+      "tier": "500 TB delivered / month",
+      "label": "1-year traffic pack vs PAYG *",
+      "price": 24147,
+      "confidence": "verified"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "provider": "tencent",
+  "service": "vpn",
+  "region": "Frankfurt",
+  "regionDetail": "regionId 17",
+  "currency": "USD",
+  "unit": "per month",
+  "retrieved": "2 Oct 2026",
+  "sources": [
+    {
+      "url": null,
+      "note": "Tencent Cloud International price pages, Frankfurt (regionId 17), 2 Oct 2026 — via \"Cloud prices - Tencent vs AWS.pptx\""
+    }
+  ],
+  "skus": [
+    {
+      "tier": "Site-to-site VPN",
+      "label": "1 site · 100 Mbps · 1 TB out",
+      "price": 143.09,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Site-to-site VPN",
+      "label": "1 site · 100 Mbps · 10 TB out",
+      "price": 852.72,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Site-to-site VPN",
+      "label": "5 sites · HA pair · 2 TB out *",
+      "price": 286.18,
+      "confidence": "verified"
+    }
+  ]
+}

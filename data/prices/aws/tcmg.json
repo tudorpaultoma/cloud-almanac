@@ -1,0 +1,35 @@
+{
+  "provider": "aws",
+  "service": "tcmg",
+  "region": "Frankfurt",
+  "regionDetail": "eu-central-1",
+  "currency": "USD",
+  "unit": "per month",
+  "retrieved": "2 Oct 2026",
+  "sources": [
+    {
+      "url": null,
+      "note": "AWS Price List API, eu-central-1, 2 Oct 2026 — via \"Cloud prices - Tencent vs AWS.pptx\""
+    }
+  ],
+  "skus": [
+    {
+      "tier": "Dashboards · TCMG",
+      "label": "10 users · Basic edition",
+      "price": 58,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Dashboards · TCMG",
+      "label": "50 users · Advanced edition",
+      "price": 290,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Dashboards · TCMG",
+      "label": "100 users · Pro edition *",
+      "price": 580,
+      "confidence": "verified"
+    }
+  ]
+}

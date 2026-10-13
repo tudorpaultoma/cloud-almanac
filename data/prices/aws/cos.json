@@ -1,0 +1,53 @@
+{
+  "provider": "aws",
+  "service": "cos",
+  "region": "Frankfurt",
+  "regionDetail": "eu-central-1",
+  "currency": "USD",
+  "unit": "per month",
+  "retrieved": "2 Oct 2026",
+  "sources": [
+    {
+      "url": null,
+      "note": "AWS Price List API, eu-central-1, 2 Oct 2026 — via \"Cloud prices - Tencent vs AWS.pptx\""
+    }
+  ],
+  "skus": [
+    {
+      "tier": "Object · 50 TB stored",
+      "label": "PAYG",
+      "price": 1254,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Object · 50 TB stored",
+      "label": "1-month capacity pack *",
+      "price": 1254,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Object · 50 TB stored",
+      "label": "1-year capacity pack *",
+      "price": 1254,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Object · 500 TB stored",
+      "label": "PAYG",
+      "price": 12083,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Object · 500 TB stored",
+      "label": "1-month capacity pack *",
+      "price": 12083,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Object · 500 TB stored",
+      "label": "1-year capacity pack *",
+      "price": 12083,
+      "confidence": "verified"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "provider": "aws",
+  "service": "vpn",
+  "region": "Frankfurt",
+  "regionDetail": "eu-central-1",
+  "currency": "USD",
+  "unit": "per month",
+  "retrieved": "2 Oct 2026",
+  "sources": [
+    {
+      "url": null,
+      "note": "AWS Price List API, eu-central-1, 2 Oct 2026 — via \"Cloud prices - Tencent vs AWS.pptx\""
+    }
+  ],
+  "skus": [
+    {
+      "tier": "Site-to-site VPN",
+      "label": "1 site · 100 Mbps · 1 TB out",
+      "price": 128.66,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Site-to-site VPN",
+      "label": "1 site · 100 Mbps · 10 TB out",
+      "price": 958.1,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Site-to-site VPN",
+      "label": "5 sites · HA pair · 2 TB out *",
+      "price": 366.82,
+      "confidence": "verified"
+    }
+  ]
+}

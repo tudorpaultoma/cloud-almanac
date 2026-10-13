@@ -1,0 +1,35 @@
+{
+  "provider": "tencent",
+  "service": "tcmg",
+  "region": "Frankfurt",
+  "regionDetail": "regionId 17",
+  "currency": "USD",
+  "unit": "per month",
+  "retrieved": "2 Oct 2026",
+  "sources": [
+    {
+      "url": null,
+      "note": "Tencent Cloud International price pages, Frankfurt (regionId 17), 2 Oct 2026 — via \"Cloud prices - Tencent vs AWS.pptx\""
+    }
+  ],
+  "skus": [
+    {
+      "tier": "Dashboards · TCMG",
+      "label": "10 users · Basic edition",
+      "price": 109,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Dashboards · TCMG",
+      "label": "50 users · Advanced edition",
+      "price": 199,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Dashboards · TCMG",
+      "label": "100 users · Pro edition *",
+      "price": 299,
+      "confidence": "verified"
+    }
+  ]
+}

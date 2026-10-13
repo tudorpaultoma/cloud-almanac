@@ -1,0 +1,35 @@
+{
+  "provider": "tencent",
+  "service": "mps",
+  "region": "Frankfurt",
+  "regionDetail": "regionId 17",
+  "currency": "USD",
+  "unit": "per month",
+  "retrieved": "2 Oct 2026",
+  "sources": [
+    {
+      "url": null,
+      "note": "Tencent Cloud International price pages, Frankfurt (regionId 17), 2 Oct 2026 — via \"Cloud prices - Tencent vs AWS.pptx\""
+    }
+  ],
+  "skus": [
+    {
+      "tier": "Transcoding",
+      "label": "10,000 min HD",
+      "price": 109,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Transcoding",
+      "label": "100,000 min HD",
+      "price": 1090,
+      "confidence": "verified"
+    },
+    {
+      "tier": "Transcoding",
+      "label": "1,000,000 min HD",
+      "price": 10900,
+      "confidence": "verified"
+    }
+  ]
+}

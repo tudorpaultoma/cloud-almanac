@@ -1,0 +1,2447 @@
+{
+  "provider": "aws",
+  "service": "rds-mysql",
+  "region": "eu-central-1",
+  "currency": "USD",
+  "unit": "per hour (on-demand)",
+  "retrieved": "2026-10-13",
+  "sources": [
+    {
+      "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonRDS/current/eu-central-1/index.json",
+      "note": "RDS MySQL Multi-AZ, on-demand"
+    }
+  ],
+  "skus": [
+    {
+      "label": "db.t4g.micro · Multi-AZ",
+      "spec": "2 vCPU / 1 GiB",
+      "hourlyUSD": 0.037,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t4g.micro",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.t3.micro · Multi-AZ",
+      "spec": "2 vCPU / 1 GiB",
+      "hourlyUSD": 0.04,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t3.micro",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.t4g.small · Multi-AZ",
+      "spec": "2 vCPU / 2 GiB",
+      "hourlyUSD": 0.074,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t4g.small",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.t3.small · Multi-AZ",
+      "spec": "2 vCPU / 2 GiB",
+      "hourlyUSD": 0.08,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t3.small",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.t4g.medium · Multi-AZ",
+      "spec": "2 vCPU / 4 GiB",
+      "hourlyUSD": 0.149,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t4g.medium",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.t3.medium · Multi-AZ",
+      "spec": "2 vCPU / 4 GiB",
+      "hourlyUSD": 0.16,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t3.medium",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.t4g.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.298,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t4g.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.t3.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.32,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t3.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6g.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.361,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6g.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8g.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.4,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8g.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7g.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.401,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7g.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.406,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6i.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.406,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6i.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7i.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.424,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7i.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m9g.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.436,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m9g.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6gd.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.448,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6gd.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8gd.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.474,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8gd.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5d.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.501,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5d.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8a.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.512,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8a.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6g.large · Multi-AZ",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.519,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6id.large · Multi-AZ",
+      "spec": "2 vCPU / 8 GiB",
+      "hourlyUSD": 0.536,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6id.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5.large · Multi-AZ",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.58,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6i.large · Multi-AZ",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.58,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6i.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8g.large · Multi-AZ",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.582,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7g.large · Multi-AZ",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.582,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7g.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.t4g.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 0.595,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t4g.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7i.large · Multi-AZ",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.61,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7i.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6gd.large · Multi-AZ",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.622,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.t3.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 0.64,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t3.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8gd.large · Multi-AZ",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.6606,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8gd.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5d.large · Multi-AZ",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.694,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5d.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5b.large · Multi-AZ",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.714,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5b.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6g.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 0.722,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6g.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6id.large · Multi-AZ",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.724,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6id.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8a.large · Multi-AZ",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.7366,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8a.large",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8g.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 0.8,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8g.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7g.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 0.801,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7g.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6i.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 0.812,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6i.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 0.812,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7i.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 0.848,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7i.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m9g.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 0.872,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m9g.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6gd.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 0.896,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6gd.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8gd.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 0.948,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8gd.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5d.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 1.003,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5d.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8a.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 1.024,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8a.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6g.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 1.038,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6id.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 16 GiB",
+      "hourlyUSD": 1.072,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6id.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 1.16,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6i.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 1.16,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6i.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8g.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 1.164,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7g.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 1.165,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7g.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.t4g.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 1.19,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t4g.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7i.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 1.22,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7i.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6gd.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 1.244,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.t3.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 1.28,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t3.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8gd.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 1.3212,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8gd.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5d.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 1.389,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5d.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5b.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 1.429,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5b.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6g.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 1.444,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6g.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6id.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 1.447,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6id.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8a.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 1.4732,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8a.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8g.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 1.6,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8g.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7g.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 1.602,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7g.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6i.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 1.624,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6i.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 1.624,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7i.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 1.696,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7i.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m9g.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 1.744,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m9g.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6gd.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 1.791,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6gd.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8gd.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 1.896,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8gd.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5d.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 2.006,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5d.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8a.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 2.048,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8a.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6g.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 2.076,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6id.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 32 GiB",
+      "hourlyUSD": 2.144,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6id.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6i.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 2.32,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6i.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 2.32,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8g.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 2.328,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7g.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 2.329,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7g.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7i.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 2.44,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7i.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6gd.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 2.488,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8gd.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 2.6424,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8gd.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5d.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 2.777,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5d.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5b.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 2.858,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5b.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6g.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 64 GiB",
+      "hourlyUSD": 2.887,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6g.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6id.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 2.895,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6id.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8a.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 2.9464,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8a.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8g.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 64 GiB",
+      "hourlyUSD": 3.2,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8g.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7g.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 64 GiB",
+      "hourlyUSD": 3.205,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7g.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 64 GiB",
+      "hourlyUSD": 3.248,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6i.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 64 GiB",
+      "hourlyUSD": 3.248,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6i.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7i.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 64 GiB",
+      "hourlyUSD": 3.392,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7i.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m9g.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 64 GiB",
+      "hourlyUSD": 3.488,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m9g.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6gd.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 64 GiB",
+      "hourlyUSD": 3.583,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6gd.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8gd.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 64 GiB",
+      "hourlyUSD": 3.792,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8gd.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5d.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 64 GiB",
+      "hourlyUSD": 4.011,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5d.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8a.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 64 GiB",
+      "hourlyUSD": 4.096,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8a.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6g.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 4.153,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6id.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 64 GiB",
+      "hourlyUSD": 4.287,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6id.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 4.64,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6i.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 4.64,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6i.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8g.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 4.656,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7g.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 4.658,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7g.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7i.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 4.88,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7i.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6gd.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 4.975,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8gd.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 5.2848,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8gd.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.x2iedn.xlarge · Multi-AZ",
+      "spec": "4 vCPU / 128 GiB",
+      "hourlyUSD": 5.326,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.x2iedn.xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5d.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 5.554,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5d.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5b.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 5.715,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5b.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6g.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 128 GiB",
+      "hourlyUSD": 5.774,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6g.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6id.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 5.789,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6id.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8a.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 5.8928,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8a.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8g.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 128 GiB",
+      "hourlyUSD": 6.4,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8g.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7g.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 128 GiB",
+      "hourlyUSD": 6.409,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7g.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6i.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 128 GiB",
+      "hourlyUSD": 6.496,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6i.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 128 GiB",
+      "hourlyUSD": 6.5,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7i.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 128 GiB",
+      "hourlyUSD": 6.784,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7i.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m9g.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 128 GiB",
+      "hourlyUSD": 6.976,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m9g.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6gd.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 128 GiB",
+      "hourlyUSD": 7.166,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6gd.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8gd.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 128 GiB",
+      "hourlyUSD": 7.584,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8gd.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5d.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 128 GiB",
+      "hourlyUSD": 8.023,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5d.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8a.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 128 GiB",
+      "hourlyUSD": 8.192,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8a.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6g.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 8.306,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6id.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 128 GiB",
+      "hourlyUSD": 8.575,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6id.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6g.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 192 GiB",
+      "hourlyUSD": 8.661,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6g.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 9.28,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6i.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 9.28,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6i.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8g.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 9.312,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7g.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 9.316,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7g.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8g.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 256 GiB",
+      "hourlyUSD": 9.6,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8g.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7g.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 192 GiB",
+      "hourlyUSD": 9.614,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7g.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6i.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 192 GiB",
+      "hourlyUSD": 9.744,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6i.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 192 GiB",
+      "hourlyUSD": 9.744,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7i.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 9.76,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7i.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6gd.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 9.951,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7i.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 192 GiB",
+      "hourlyUSD": 10.176,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7i.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m9g.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 192 GiB",
+      "hourlyUSD": 10.464,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m9g.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8gd.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 10.5696,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8gd.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.x2iedn.2xlarge · Multi-AZ",
+      "spec": "8 vCPU / 256 GiB",
+      "hourlyUSD": 10.652,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.x2iedn.2xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6gd.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 192 GiB",
+      "hourlyUSD": 10.748,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6gd.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5d.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 11.108,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5d.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8gd.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 192 GiB",
+      "hourlyUSD": 11.376,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8gd.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5b.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 11.43,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5b.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6g.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 256 GiB",
+      "hourlyUSD": 11.548,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6g.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6id.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 11.578,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6id.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8a.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 11.7856,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8a.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5d.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 192 GiB",
+      "hourlyUSD": 12.034,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5d.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8a.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 192 GiB",
+      "hourlyUSD": 12.288,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8a.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6g.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 12.458,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8g.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 384 GiB",
+      "hourlyUSD": 12.8,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8g.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7g.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 256 GiB",
+      "hourlyUSD": 12.818,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7g.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6id.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 192 GiB",
+      "hourlyUSD": 12.862,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6id.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 256 GiB",
+      "hourlyUSD": 12.99,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6i.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 256 GiB",
+      "hourlyUSD": 12.992,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6i.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7i.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 256 GiB",
+      "hourlyUSD": 13.568,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7i.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 13.92,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6i.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 13.92,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6i.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m9g.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 256 GiB",
+      "hourlyUSD": 13.952,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m9g.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8g.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 13.968,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7g.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 13.974,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7g.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6gd.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 256 GiB",
+      "hourlyUSD": 14.331,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6gd.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7i.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 14.64,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7i.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6gd.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 14.926,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8gd.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 256 GiB",
+      "hourlyUSD": 15.168,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8gd.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8gd.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 15.8544,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8gd.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5d.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 256 GiB",
+      "hourlyUSD": 16.046,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5d.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8a.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 256 GiB",
+      "hourlyUSD": 16.384,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8a.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6g.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 16.611,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5d.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 16.663,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5d.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5b.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 17.146,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5b.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6id.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 256 GiB",
+      "hourlyUSD": 17.15,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6id.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6id.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 17.367,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6id.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8a.12xlarge · Multi-AZ",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 17.6784,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8a.12xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6i.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 18.56,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6i.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 18.56,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8g.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 18.624,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7g.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 18.632,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7g.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8g.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 512 GiB",
+      "hourlyUSD": 19.2,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8g.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6i.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 384 GiB",
+      "hourlyUSD": 19.488,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6i.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 384 GiB",
+      "hourlyUSD": 19.488,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7i.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 19.52,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7i.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6gd.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 19.901,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7i.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 384 GiB",
+      "hourlyUSD": 20.352,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7i.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m9g.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 384 GiB",
+      "hourlyUSD": 20.928,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m9g.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8gd.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 21.1392,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8gd.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.x2iedn.4xlarge · Multi-AZ",
+      "spec": "16 vCPU / 512 GiB",
+      "hourlyUSD": 21.304,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.x2iedn.4xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5d.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 22.217,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5d.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8gd.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 384 GiB",
+      "hourlyUSD": 22.752,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8gd.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5b.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 22.861,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5b.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6id.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 23.156,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6id.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8a.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 23.5712,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8a.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m5d.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 384 GiB",
+      "hourlyUSD": 24.068,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m5d.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8a.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 384 GiB",
+      "hourlyUSD": 24.576,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8a.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6id.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 384 GiB",
+      "hourlyUSD": 25.725,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6id.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6i.32xlarge · Multi-AZ",
+      "spec": "128 vCPU / 512 GiB",
+      "hourlyUSD": 25.984,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6i.32xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 27.84,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6i.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 27.84,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6i.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8g.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 27.936,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7i.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 29.28,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7i.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8gd.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 31.7088,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8gd.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5d.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 33.325,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5d.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r5b.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 34.291,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5b.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m6id.32xlarge · Multi-AZ",
+      "spec": "128 vCPU / 512 GiB",
+      "hourlyUSD": 34.3,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m6id.32xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6id.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 34.734,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6id.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8a.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 35.3568,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8a.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6i.32xlarge · Multi-AZ",
+      "spec": "128 vCPU / 1024 GiB",
+      "hourlyUSD": 37.12,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6i.32xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8g.48xlarge · Multi-AZ",
+      "spec": "192 vCPU / 768 GiB",
+      "hourlyUSD": 38.4,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8g.48xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m7i.48xlarge · Multi-AZ",
+      "spec": "192 vCPU / 768 GiB",
+      "hourlyUSD": 40.704,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m7i.48xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m9g.48xlarge · Multi-AZ",
+      "spec": "192 vCPU / 768 GiB",
+      "hourlyUSD": 41.856,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m9g.48xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.x2iedn.8xlarge · Multi-AZ",
+      "spec": "32 vCPU / 1024 GiB",
+      "hourlyUSD": 42.608,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.x2iedn.8xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8gd.48xlarge · Multi-AZ",
+      "spec": "192 vCPU / 768 GiB",
+      "hourlyUSD": 45.504,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8gd.48xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r6id.32xlarge · Multi-AZ",
+      "spec": "128 vCPU / 1024 GiB",
+      "hourlyUSD": 46.313,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6id.32xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.m8a.48xlarge · Multi-AZ",
+      "spec": "192 vCPU / 768 GiB",
+      "hourlyUSD": 49.152,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.m8a.48xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.x2idn.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 1024 GiB",
+      "hourlyUSD": 49.894,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.x2idn.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8g.48xlarge · Multi-AZ",
+      "spec": "192 vCPU / 1536 GiB",
+      "hourlyUSD": 55.872,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.48xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r7i.48xlarge · Multi-AZ",
+      "spec": "192 vCPU / 1536 GiB",
+      "hourlyUSD": 58.56,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r7i.48xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8gd.48xlarge · Multi-AZ",
+      "spec": "192 vCPU / 1536 GiB",
+      "hourlyUSD": 63.4176,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8gd.48xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.r8a.48xlarge · Multi-AZ",
+      "spec": "192 vCPU / 1536 GiB",
+      "hourlyUSD": 70.7136,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8a.48xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.x2idn.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 1536 GiB",
+      "hourlyUSD": 74.842,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.x2idn.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.x2iedn.16xlarge · Multi-AZ",
+      "spec": "64 vCPU / 2048 GiB",
+      "hourlyUSD": 85.216,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.x2iedn.16xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.x2idn.32xlarge · Multi-AZ",
+      "spec": "128 vCPU / 2048 GiB",
+      "hourlyUSD": 99.789,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.x2idn.32xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.x2iedn.24xlarge · Multi-AZ",
+      "spec": "96 vCPU / 3072 GiB",
+      "hourlyUSD": 127.824,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.x2iedn.24xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    },
+    {
+      "label": "db.x2iedn.32xlarge · Multi-AZ",
+      "spec": "128 vCPU / 4096 GiB",
+      "hourlyUSD": 170.432,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.x2iedn.32xlarge",
+        "engine": "MySQL",
+        "deployment": "Multi-AZ"
+      }
+    }
+  ]
+}

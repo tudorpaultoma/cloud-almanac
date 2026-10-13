@@ -1,0 +1,77 @@
+{
+  "provider": "tencent",
+  "service": "pgsql",
+  "region": "Frankfurt",
+  "regionDetail": "regionId 17",
+  "currency": "USD",
+  "unit": "per month",
+  "retrieved": "2026-10-13",
+  "sources": [
+    {
+      "url": "https://staticintl.cloudcachetci.com/doc/pdf/product/pdf/tencent-cloud_409_4988_en.pdf",
+      "note": "TencentDB for PostgreSQL Purchase Guide — PAYG tiers Frankfurt: T1 $0.055, T2 $0.041, T3 $0.028 /GiB/hr (memory). Disk excluded."
+    },
+    {
+      "url": "https://buy.intl.cloud.tencent.com/pricing/PostgreSQL",
+      "note": "International pricing page (JS-rendered; region column needs manual confirmation before adding monthly/term rows)"
+    }
+  ],
+  "skus": [
+    {
+      "tier": "4 vCPU / 16 GB",
+      "label": "PAYG T1 (0–96 h)",
+      "price": 642.4,
+      "confidence": "verified",
+      "derivation": "spec fee = 16 GiB × tier rate × 730 h"
+    },
+    {
+      "tier": "4 vCPU / 16 GB",
+      "label": "PAYG avg T2/T3",
+      "price": 402.96,
+      "confidence": "verified",
+      "derivation": "spec fee = 16 GiB × tier rate × 730 h"
+    },
+    {
+      "tier": "8 vCPU / 32 GB",
+      "label": "PAYG T1 (0–96 h)",
+      "price": 1284.8,
+      "confidence": "verified",
+      "derivation": "spec fee = 32 GiB × tier rate × 730 h"
+    },
+    {
+      "tier": "8 vCPU / 32 GB",
+      "label": "PAYG avg T2/T3",
+      "price": 805.92,
+      "confidence": "verified",
+      "derivation": "spec fee = 32 GiB × tier rate × 730 h"
+    },
+    {
+      "tier": "16 vCPU / 64 GB",
+      "label": "PAYG T1 (0–96 h)",
+      "price": 2569.6,
+      "confidence": "verified",
+      "derivation": "spec fee = 64 GiB × tier rate × 730 h"
+    },
+    {
+      "tier": "16 vCPU / 64 GB",
+      "label": "PAYG avg T2/T3",
+      "price": 1611.84,
+      "confidence": "verified",
+      "derivation": "spec fee = 64 GiB × tier rate × 730 h"
+    },
+    {
+      "tier": "32 vCPU / 128 GB",
+      "label": "PAYG T1 (0–96 h)",
+      "price": 5139.2,
+      "confidence": "verified",
+      "derivation": "spec fee = 128 GiB × tier rate × 730 h"
+    },
+    {
+      "tier": "32 vCPU / 128 GB",
+      "label": "PAYG avg T2/T3",
+      "price": 3223.68,
+      "confidence": "verified",
+      "derivation": "spec fee = 128 GiB × tier rate × 730 h"
+    }
+  ]
+}

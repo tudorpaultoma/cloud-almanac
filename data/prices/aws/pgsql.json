@@ -1,0 +1,72 @@
+{
+  "provider": "aws",
+  "service": "pgsql",
+  "region": "eu-central-1",
+  "currency": "USD",
+  "unit": "per month",
+  "retrieved": "2026-10-13",
+  "sources": [
+    {
+      "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonRDS/current/eu-central-1/index.json",
+      "note": "RDS PostgreSQL Multi-AZ on-demand via tools/retrieve/aws.js"
+    }
+  ],
+  "skus": [
+    {
+      "tier": "4 vCPU / 16 GB",
+      "label": "PAYG T1 (0–96 h)",
+      "price": 619.04,
+      "confidence": "verified",
+      "derivation": "db.m6i.xlarge Multi-AZ on-demand hourly × 730 h (AWS has no PAYG tiers — flat rate on both rows)"
+    },
+    {
+      "tier": "4 vCPU / 16 GB",
+      "label": "PAYG avg T2/T3",
+      "price": 619.04,
+      "confidence": "verified",
+      "derivation": "db.m6i.xlarge Multi-AZ on-demand hourly × 730 h (AWS has no PAYG tiers — flat rate on both rows)"
+    },
+    {
+      "tier": "8 vCPU / 32 GB",
+      "label": "PAYG T1 (0–96 h)",
+      "price": 1238.08,
+      "confidence": "verified",
+      "derivation": "db.m6i.2xlarge Multi-AZ on-demand hourly × 730 h (AWS has no PAYG tiers — flat rate on both rows)"
+    },
+    {
+      "tier": "8 vCPU / 32 GB",
+      "label": "PAYG avg T2/T3",
+      "price": 1238.08,
+      "confidence": "verified",
+      "derivation": "db.m6i.2xlarge Multi-AZ on-demand hourly × 730 h (AWS has no PAYG tiers — flat rate on both rows)"
+    },
+    {
+      "tier": "16 vCPU / 64 GB",
+      "label": "PAYG T1 (0–96 h)",
+      "price": 2476.16,
+      "confidence": "verified",
+      "derivation": "db.m6i.4xlarge Multi-AZ on-demand hourly × 730 h (AWS has no PAYG tiers — flat rate on both rows)"
+    },
+    {
+      "tier": "16 vCPU / 64 GB",
+      "label": "PAYG avg T2/T3",
+      "price": 2476.16,
+      "confidence": "verified",
+      "derivation": "db.m6i.4xlarge Multi-AZ on-demand hourly × 730 h (AWS has no PAYG tiers — flat rate on both rows)"
+    },
+    {
+      "tier": "32 vCPU / 128 GB",
+      "label": "PAYG T1 (0–96 h)",
+      "price": 4952.32,
+      "confidence": "verified",
+      "derivation": "db.m6i.8xlarge Multi-AZ on-demand hourly × 730 h (AWS has no PAYG tiers — flat rate on both rows)"
+    },
+    {
+      "tier": "32 vCPU / 128 GB",
+      "label": "PAYG avg T2/T3",
+      "price": 4952.32,
+      "confidence": "verified",
+      "derivation": "db.m6i.8xlarge Multi-AZ on-demand hourly × 730 h (AWS has no PAYG tiers — flat rate on both rows)"
+    }
+  ]
+}

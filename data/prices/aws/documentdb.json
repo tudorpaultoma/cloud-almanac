@@ -1,0 +1,656 @@
+{
+  "provider": "aws",
+  "service": "documentdb",
+  "region": "eu-central-1",
+  "currency": "USD",
+  "unit": "per hour (on-demand)",
+  "retrieved": "2026-10-13",
+  "sources": [
+    {
+      "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonDocDB/current/eu-central-1/index.json",
+      "note": "DocumentDB instance, on-demand"
+    }
+  ],
+  "skus": [
+    {
+      "label": "db.t4g.medium",
+      "spec": "2 vCPU / 4 GiB",
+      "hourlyUSD": 0.08924,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t4g.medium",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.t3.medium",
+      "spec": "2 vCPU / 4 GiB",
+      "hourlyUSD": 0.092,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t3.medium",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.t4g.medium",
+      "spec": "2 vCPU / 4 GiB",
+      "hourlyUSD": 0.0982,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t4g.medium",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.t3.medium",
+      "spec": "2 vCPU / 4 GiB",
+      "hourlyUSD": 0.1012,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.t3.medium",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.large",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.3173,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.large",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.large",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.3328477,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.large",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.large",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.334,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.large",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.large",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.349,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.large",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.large",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.366101,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.large",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.large",
+      "spec": "2 vCPU / 16 GiB",
+      "hourlyUSD": 0.3674,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.large",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.xlarge",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 0.6346,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.xlarge",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 0.6656954,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.xlarge",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 0.668,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.xlarge",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 0.6981,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.xlarge",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 0.7323069,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.xlarge",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 0.7348,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6gd.xlarge",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 0.7742,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6gd.xlarge",
+      "spec": "4 vCPU / 32 GiB",
+      "hourlyUSD": 0.7742,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.2xlarge",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 1.2692,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.2xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.2xlarge",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 1.3313908,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.2xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.2xlarge",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 1.336,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.2xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.2xlarge",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 1.3961,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.2xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.2xlarge",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 1.4645089,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.2xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.2xlarge",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 1.4696,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.2xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6gd.2xlarge",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 1.5484,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.2xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6gd.2xlarge",
+      "spec": "8 vCPU / 64 GiB",
+      "hourlyUSD": 1.5484,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.2xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.4xlarge",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 2.5384,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.4xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.4xlarge",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 2.6627816,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.4xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.4xlarge",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 2.672,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.4xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.4xlarge",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 2.7922,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.4xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.4xlarge",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 2.9290178,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.4xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.4xlarge",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 2.9392,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.4xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6gd.4xlarge",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 3.0968,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.4xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6gd.4xlarge",
+      "spec": "16 vCPU / 128 GiB",
+      "hourlyUSD": 3.0968,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.4xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.8xlarge",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 5.0806,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.8xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.8xlarge",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 5.3295494,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.8xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.8xlarge",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 5.348,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.8xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.8xlarge",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 5.5887,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.8xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.8xlarge",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 5.8625463,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.8xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.8xlarge",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 5.8828,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.8xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6gd.8xlarge",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 6.1983,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.8xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6gd.8xlarge",
+      "spec": "32 vCPU / 256 GiB",
+      "hourlyUSD": 6.1983,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.8xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.12xlarge",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 7.6152,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.12xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.12xlarge",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 7.9883448,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.12xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.12xlarge",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 8.016,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.12xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.12xlarge",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 8.3767,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.12xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.12xlarge",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 8.7871583,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.12xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.12xlarge",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 8.8176,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.12xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6gd.12xlarge",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 9.2905,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.12xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6gd.12xlarge",
+      "spec": "48 vCPU / 384 GiB",
+      "hourlyUSD": 9.2905,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.12xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.16xlarge",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 10.1612,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.16xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.16xlarge",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 10.6590988,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.16xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.16xlarge",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 10.696,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.16xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6g.16xlarge",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 11.1773,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6g.16xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.16xlarge",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 11.7249877,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.16xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.16xlarge",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 11.7656,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.16xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6gd.16xlarge",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 12.3967,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.16xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r6gd.16xlarge",
+      "spec": "64 vCPU / 512 GiB",
+      "hourlyUSD": 12.3967,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r6gd.16xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.24xlarge",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 15.97669,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.24xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.24xlarge",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 16.032,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.24xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.24xlarge",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 17.574317,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.24xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r5.24xlarge",
+      "spec": "96 vCPU / 768 GiB",
+      "hourlyUSD": 17.6352,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r5.24xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.48xlarge",
+      "spec": "192 vCPU / 1536 GiB",
+      "hourlyUSD": 31.953379,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.48xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    },
+    {
+      "label": "db.r8g.48xlarge",
+      "spec": "192 vCPU / 1536 GiB",
+      "hourlyUSD": 35.148633,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "db.r8g.48xlarge",
+        "engine": "Amazon DocumentDB"
+      }
+    }
+  ]
+}

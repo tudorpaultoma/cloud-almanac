@@ -66,7 +66,7 @@
     { name: 'Database', items: [
       ['TencentDB for MySQL', 'RDS for MySQL', 'ok', null, 'mysql'],
       ['TencentDB for MariaDB', 'RDS for MariaDB', 'ok'],
-      ['TencentDB for PostgreSQL', 'RDS for PostgreSQL', 'ok'],
+      ['TencentDB for PostgreSQL', 'RDS for PostgreSQL', 'ok', null, 'pgsql'],
       ['TencentDB for SQL Server', 'RDS for SQL Server', 'ok'],
       ['TDSQL-C for MySQL', 'Aurora MySQL', 'ok'],
       ['TDSQL-C for PostgreSQL', 'Aurora PostgreSQL', 'ok'],

@@ -1,0 +1,1006 @@
+{
+  "provider": "aws",
+  "service": "elasticache-redis",
+  "region": "eu-central-1",
+  "currency": "USD",
+  "unit": "per hour (on-demand)",
+  "retrieved": "2026-10-13",
+  "sources": [
+    {
+      "url": "https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonElastiCache/current/eu-central-1/index.json",
+      "note": "Valkey on Graviton, on-demand"
+    }
+  ],
+  "skus": [
+    {
+      "label": "cache.t4g.micro",
+      "spec": "2 vCPU / 0.5 GiB",
+      "hourlyUSD": 0.0144,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.t4g.micro",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.t3.micro",
+      "spec": "2 vCPU / 0.5 GiB",
+      "hourlyUSD": 0.0152,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.t3.micro",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.t2.micro",
+      "spec": "1 vCPU / 0.555 GiB",
+      "hourlyUSD": 0.0152,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.t2.micro",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.t4g.small",
+      "spec": "2 vCPU / 1.37 GiB",
+      "hourlyUSD": 0.0288,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.t4g.small",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.t3.small",
+      "spec": "2 vCPU / 1.37 GiB",
+      "hourlyUSD": 0.0304,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.t3.small",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.t2.small",
+      "spec": "1 vCPU / 1.55 GiB",
+      "hourlyUSD": 0.0304,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.t2.small",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m5.large",
+      "spec": "2 vCPU / 6.38 GiB",
+      "hourlyUSD": 0.0568,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m5.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.t4g.medium",
+      "spec": "2 vCPU / 3.09 GiB",
+      "hourlyUSD": 0.0576,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.t4g.medium",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.t3.medium",
+      "spec": "2 vCPU / 3.09 GiB",
+      "hourlyUSD": 0.0608,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.t3.medium",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.t2.medium",
+      "spec": "2 vCPU / 3.22 GiB",
+      "hourlyUSD": 0.0624,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.t2.medium",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r5.large",
+      "spec": "2 vCPU / 13.07 GiB",
+      "hourlyUSD": 0.0864,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r5.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m5.xlarge",
+      "spec": "4 vCPU / 12.93 GiB",
+      "hourlyUSD": 0.1128,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m5.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m6g.large",
+      "spec": "2 vCPU / 6.38 GiB",
+      "hourlyUSD": 0.1416,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m6g.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m5.large",
+      "spec": "2 vCPU / 6.38 GiB",
+      "hourlyUSD": 0.1488,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m5.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m4.large",
+      "spec": "2 vCPU / 6.42 GiB",
+      "hourlyUSD": 0.1488,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m4.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m7g.large",
+      "spec": "2 vCPU / 6.38 GiB",
+      "hourlyUSD": 0.1504,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m7g.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m8g.large",
+      "spec": "2 vCPU / 6.79 GiB",
+      "hourlyUSD": 0.1516,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m8g.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r5.xlarge",
+      "spec": "4 vCPU / 26.32 GiB",
+      "hourlyUSD": 0.1712,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r5.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6g.large",
+      "spec": "2 vCPU / 13.07 GiB",
+      "hourlyUSD": 0.1976,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6g.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r5.large",
+      "spec": "2 vCPU / 13.07 GiB",
+      "hourlyUSD": 0.208,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r5.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.c8gn.large",
+      "spec": "2 vCPU / 3.1 GiB",
+      "hourlyUSD": 0.2093,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.c8gn.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r7g.large",
+      "spec": "2 vCPU / 13.07 GiB",
+      "hourlyUSD": 0.2104,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r7g.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r8g.large",
+      "spec": "2 vCPU / 14.18 GiB",
+      "hourlyUSD": 0.2118,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r8g.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r4.large",
+      "spec": "2 vCPU / 12.3 GiB",
+      "hourlyUSD": 0.2192,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r4.large",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m5.2xlarge",
+      "spec": "8 vCPU / 26.04 GiB",
+      "hourlyUSD": 0.2248,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m5.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m6g.xlarge",
+      "spec": "4 vCPU / 12.93 GiB",
+      "hourlyUSD": 0.2832,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m6g.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m5.xlarge",
+      "spec": "4 vCPU / 12.93 GiB",
+      "hourlyUSD": 0.2968,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m5.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m4.xlarge",
+      "spec": "4 vCPU / 14.28 GiB",
+      "hourlyUSD": 0.2968,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m4.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m7g.xlarge",
+      "spec": "4 vCPU / 12.93 GiB",
+      "hourlyUSD": 0.3,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m7g.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m8g.xlarge",
+      "spec": "4 vCPU / 14.18 GiB",
+      "hourlyUSD": 0.3033,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m8g.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r5.2xlarge",
+      "spec": "8 vCPU / 52.82 GiB",
+      "hourlyUSD": 0.3432,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r5.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6g.xlarge",
+      "spec": "4 vCPU / 26.32 GiB",
+      "hourlyUSD": 0.3952,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6g.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r5.xlarge",
+      "spec": "4 vCPU / 26.32 GiB",
+      "hourlyUSD": 0.4144,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r5.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.c8gn.xlarge",
+      "spec": "4 vCPU / 6.79 GiB",
+      "hourlyUSD": 0.4186,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.c8gn.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r7g.xlarge",
+      "spec": "4 vCPU / 26.32 GiB",
+      "hourlyUSD": 0.42,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r7g.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r8g.xlarge",
+      "spec": "4 vCPU / 29.68 GiB",
+      "hourlyUSD": 0.4235,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r8g.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r4.xlarge",
+      "spec": "4 vCPU / 25.05 GiB",
+      "hourlyUSD": 0.4376,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r4.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m5.4xlarge",
+      "spec": "16 vCPU / 52.26 GiB",
+      "hourlyUSD": 0.4496,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m5.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m6g.2xlarge",
+      "spec": "8 vCPU / 26.04 GiB",
+      "hourlyUSD": 0.5656,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m6g.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m4.2xlarge",
+      "spec": "8 vCPU / 29.7 GiB",
+      "hourlyUSD": 0.5928,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m4.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m5.2xlarge",
+      "spec": "8 vCPU / 26.04 GiB",
+      "hourlyUSD": 0.5928,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m5.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m7g.2xlarge",
+      "spec": "8 vCPU / 26.04 GiB",
+      "hourlyUSD": 0.5992,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m7g.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m8g.2xlarge",
+      "spec": "8 vCPU / 29.68 GiB",
+      "hourlyUSD": 0.6065,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m8g.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r5.4xlarge",
+      "spec": "16 vCPU / 105.81 GiB",
+      "hourlyUSD": 0.6872,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r5.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6gd.xlarge",
+      "spec": "4 vCPU / 26.32 GiB",
+      "hourlyUSD": 0.7512,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6gd.xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6g.2xlarge",
+      "spec": "8 vCPU / 52.82 GiB",
+      "hourlyUSD": 0.7904,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6g.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r5.2xlarge",
+      "spec": "8 vCPU / 52.82 GiB",
+      "hourlyUSD": 0.8296,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r5.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.c8gn.2xlarge",
+      "spec": "8 vCPU / 14.18 GiB",
+      "hourlyUSD": 0.8372,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.c8gn.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r7g.2xlarge",
+      "spec": "8 vCPU / 52.82 GiB",
+      "hourlyUSD": 0.84,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r7g.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r8g.2xlarge",
+      "spec": "8 vCPU / 61.33 GiB",
+      "hourlyUSD": 0.847,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r8g.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r4.2xlarge",
+      "spec": "8 vCPU / 50.47 GiB",
+      "hourlyUSD": 0.876,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r4.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m6g.4xlarge",
+      "spec": "16 vCPU / 52.26 GiB",
+      "hourlyUSD": 1.1312,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m6g.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m5.4xlarge",
+      "spec": "16 vCPU / 52.26 GiB",
+      "hourlyUSD": 1.1856,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m5.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m4.4xlarge",
+      "spec": "16 vCPU / 60.78 GiB",
+      "hourlyUSD": 1.1856,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m4.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m7g.4xlarge",
+      "spec": "16 vCPU / 52.26 GiB",
+      "hourlyUSD": 1.1992,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m7g.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m8g.4xlarge",
+      "spec": "16 vCPU / 61.33 GiB",
+      "hourlyUSD": 1.2131,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m8g.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m5.12xlarge",
+      "spec": "48 vCPU / 157.12 GiB",
+      "hourlyUSD": 1.3632,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m5.12xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6gd.2xlarge",
+      "spec": "8 vCPU / 52.82 GiB",
+      "hourlyUSD": 1.5016,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6gd.2xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6g.4xlarge",
+      "spec": "16 vCPU / 105.81 GiB",
+      "hourlyUSD": 1.5808,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6g.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r5.4xlarge",
+      "spec": "16 vCPU / 105.81 GiB",
+      "hourlyUSD": 1.66,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r5.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.c8gn.4xlarge",
+      "spec": "16 vCPU / 29.68 GiB",
+      "hourlyUSD": 1.6744,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.c8gn.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r7g.4xlarge",
+      "spec": "16 vCPU / 105.81 GiB",
+      "hourlyUSD": 1.68,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r7g.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r8g.4xlarge",
+      "spec": "16 vCPU / 124.65 GiB",
+      "hourlyUSD": 1.6941,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r8g.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r4.4xlarge",
+      "spec": "16 vCPU / 101.38 GiB",
+      "hourlyUSD": 1.752,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r4.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r5.12xlarge",
+      "spec": "48 vCPU / 317.77 GiB",
+      "hourlyUSD": 2.0656,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r5.12xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m6g.8xlarge",
+      "spec": "32 vCPU / 103.68 GiB",
+      "hourlyUSD": 2.2624,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m6g.8xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m7g.8xlarge",
+      "spec": "32 vCPU / 103.68 GiB",
+      "hourlyUSD": 2.3984,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m7g.8xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m8g.8xlarge",
+      "spec": "32 vCPU / 124.65 GiB",
+      "hourlyUSD": 2.4261,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m8g.8xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m5.24xlarge",
+      "spec": "96 vCPU / 314.32 GiB",
+      "hourlyUSD": 2.7264,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m5.24xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m4.10xlarge",
+      "spec": "40 vCPU / 154.64 GiB",
+      "hourlyUSD": 2.964,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m4.10xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6gd.4xlarge",
+      "spec": "16 vCPU / 105.81 GiB",
+      "hourlyUSD": 3.0032,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6gd.4xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6g.8xlarge",
+      "spec": "32 vCPU / 209.55 GiB",
+      "hourlyUSD": 3.1616,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6g.8xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.c8gn.8xlarge",
+      "spec": "32 vCPU / 61.33 GiB",
+      "hourlyUSD": 3.3488,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.c8gn.8xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r7g.8xlarge",
+      "spec": "32 vCPU / 209.55 GiB",
+      "hourlyUSD": 3.3608,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r7g.8xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r8g.8xlarge",
+      "spec": "32 vCPU / 251.27 GiB",
+      "hourlyUSD": 3.3881,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r8g.8xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m6g.12xlarge",
+      "spec": "48 vCPU / 157.12 GiB",
+      "hourlyUSD": 3.3928,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m6g.12xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r4.8xlarge",
+      "spec": "32 vCPU / 203.26 GiB",
+      "hourlyUSD": 3.504,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r4.8xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m5.12xlarge",
+      "spec": "48 vCPU / 157.12 GiB",
+      "hourlyUSD": 3.5712,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m5.12xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m7g.12xlarge",
+      "spec": "48 vCPU / 157.12 GiB",
+      "hourlyUSD": 3.596,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m7g.12xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m8g.12xlarge",
+      "spec": "48 vCPU / 187.96 GiB",
+      "hourlyUSD": 3.6392,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m8g.12xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r5.24xlarge",
+      "spec": "96 vCPU / 635.61 GiB",
+      "hourlyUSD": 4.1312,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r5.24xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m6g.16xlarge",
+      "spec": "64 vCPU / 209.55 GiB",
+      "hourlyUSD": 4.524,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m6g.16xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6g.12xlarge",
+      "spec": "48 vCPU / 317.77 GiB",
+      "hourlyUSD": 4.7424,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6g.12xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m7g.16xlarge",
+      "spec": "64 vCPU / 209.55 GiB",
+      "hourlyUSD": 4.7952,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m7g.16xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m8g.16xlarge",
+      "spec": "64 vCPU / 251.27 GiB",
+      "hourlyUSD": 4.8522,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m8g.16xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r5.12xlarge",
+      "spec": "48 vCPU / 317.77 GiB",
+      "hourlyUSD": 4.984,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r5.12xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.c8gn.12xlarge",
+      "spec": "48 vCPU / 92.99 GiB",
+      "hourlyUSD": 5.0232,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.c8gn.12xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r7g.12xlarge",
+      "spec": "48 vCPU / 317.77 GiB",
+      "hourlyUSD": 5.0408,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r7g.12xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r8g.12xlarge",
+      "spec": "48 vCPU / 377.9 GiB",
+      "hourlyUSD": 5.0822,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r8g.12xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6gd.8xlarge",
+      "spec": "32 vCPU / 209.55 GiB",
+      "hourlyUSD": 6.0072,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6gd.8xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6g.16xlarge",
+      "spec": "64 vCPU / 419.09 GiB",
+      "hourlyUSD": 6.3232,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6g.16xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.c8gn.16xlarge",
+      "spec": "64 vCPU / 124.65 GiB",
+      "hourlyUSD": 6.6976,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.c8gn.16xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r7g.16xlarge",
+      "spec": "64 vCPU / 419.09 GiB",
+      "hourlyUSD": 6.7216,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r7g.16xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r8g.16xlarge",
+      "spec": "64 vCPU / 504.52 GiB",
+      "hourlyUSD": 6.7763,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r8g.16xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r4.16xlarge",
+      "spec": "64 vCPU / 407 GiB",
+      "hourlyUSD": 7.008,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r4.16xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.m5.24xlarge",
+      "spec": "96 vCPU / 314.32 GiB",
+      "hourlyUSD": 7.1424,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.m5.24xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6gd.12xlarge",
+      "spec": "48 vCPU / 317.77 GiB",
+      "hourlyUSD": 9.0104,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6gd.12xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r5.24xlarge",
+      "spec": "96 vCPU / 635.61 GiB",
+      "hourlyUSD": 9.968,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r5.24xlarge",
+        "engine": "Valkey"
+      }
+    },
+    {
+      "label": "cache.r6gd.16xlarge",
+      "spec": "64 vCPU / 419.09 GiB",
+      "hourlyUSD": 12.0144,
+      "confidence": "verified",
+      "attr": {
+        "instanceType": "cache.r6gd.16xlarge",
+        "engine": "Valkey"
+      }
+    }
+  ]
+}

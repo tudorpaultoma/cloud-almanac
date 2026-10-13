@@ -1,0 +1,89 @@
+{
+  "provider": "aws",
+  "service": "redis",
+  "region": "Frankfurt",
+  "regionDetail": "eu-central-1",
+  "currency": "USD",
+  "unit": "per month",
+  "retrieved": "2 Oct 2026",
+  "sources": [
+    {
+      "url": null,
+      "note": "AWS Price List API, eu-central-1, 2 Oct 2026 — via \"Cloud prices - Tencent vs AWS.pptx\""
+    }
+  ],
+  "skus": [
+    {
+      "tier": "8 GB · master + replica",
+      "label": "PAYG avg T2/T3 $0.282/h",
+      "price": 288.5,
+      "confidence": "verified"
+    },
+    {
+      "tier": "8 GB · master + replica",
+      "label": "Monthly prepaid vs on-demand",
+      "price": 288.5,
+      "confidence": "verified"
+    },
+    {
+      "tier": "8 GB · master + replica",
+      "label": "1-year prepaid vs 1-yr reserved",
+      "price": 183.87,
+      "confidence": "verified"
+    },
+    {
+      "tier": "16 GB · master + replica",
+      "label": "PAYG avg T2/T3 $0.564/h",
+      "price": 576.99,
+      "confidence": "verified"
+    },
+    {
+      "tier": "16 GB · master + replica",
+      "label": "Monthly prepaid vs on-demand",
+      "price": 576.99,
+      "confidence": "verified"
+    },
+    {
+      "tier": "16 GB · master + replica",
+      "label": "1-year prepaid vs 1-yr reserved",
+      "price": 367.6,
+      "confidence": "verified"
+    },
+    {
+      "tier": "32 GB · master + replica",
+      "label": "PAYG avg T2/T3 $1.128/h",
+      "price": 1154,
+      "confidence": "verified"
+    },
+    {
+      "tier": "32 GB · master + replica",
+      "label": "Monthly prepaid vs on-demand",
+      "price": 1154,
+      "confidence": "verified"
+    },
+    {
+      "tier": "32 GB · master + replica",
+      "label": "1-year prepaid vs 1-yr reserved",
+      "price": 735.2,
+      "confidence": "verified"
+    },
+    {
+      "tier": "64 GB · master + replica",
+      "label": "PAYG avg T2/T3 $2.256/h",
+      "price": 2308,
+      "confidence": "verified"
+    },
+    {
+      "tier": "64 GB · master + replica",
+      "label": "Monthly prepaid vs on-demand",
+      "price": 2308,
+      "confidence": "verified"
+    },
+    {
+      "tier": "64 GB · master + replica",
+      "label": "1-year prepaid vs 1-yr reserved",
+      "price": 1470,
+      "confidence": "verified"
+    }
+  ]
+}

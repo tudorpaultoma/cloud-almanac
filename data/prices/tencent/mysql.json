@@ -1,0 +1,89 @@
+{
+  "provider": "tencent",
+  "service": "mysql",
+  "region": "Frankfurt",
+  "regionDetail": "regionId 17",
+  "currency": "USD",
+  "unit": "per month",
+  "retrieved": "2 Oct 2026",
+  "sources": [
+    {
+      "url": null,
+      "note": "Tencent Cloud International price pages, Frankfurt (regionId 17), 2 Oct 2026 — via \"Cloud prices - Tencent vs AWS.pptx\""
+    }
+  ],
+  "skus": [
+    {
+      "tier": "4 vCPU / 16 GB",
+      "label": "PAYG avg T2/T3 $0.55/h",
+      "price": 401.5,
+      "confidence": "verified"
+    },
+    {
+      "tier": "4 vCPU / 16 GB",
+      "label": "Monthly prepaid vs on-demand",
+      "price": 418.82,
+      "confidence": "verified"
+    },
+    {
+      "tier": "4 vCPU / 16 GB",
+      "label": "1-year prepaid vs 1-yr RI",
+      "price": 347.62,
+      "confidence": "verified"
+    },
+    {
+      "tier": "8 vCPU / 32 GB",
+      "label": "PAYG avg T2/T3 $1.10/h",
+      "price": 803,
+      "confidence": "verified"
+    },
+    {
+      "tier": "8 vCPU / 32 GB",
+      "label": "Monthly prepaid vs on-demand",
+      "price": 837.65,
+      "confidence": "verified"
+    },
+    {
+      "tier": "8 vCPU / 32 GB",
+      "label": "1-year prepaid vs 1-yr RI",
+      "price": 695.25,
+      "confidence": "verified"
+    },
+    {
+      "tier": "16 vCPU / 64 GB",
+      "label": "PAYG avg T2/T3 $2.20/h",
+      "price": 1606,
+      "confidence": "verified"
+    },
+    {
+      "tier": "16 vCPU / 64 GB",
+      "label": "Monthly prepaid vs on-demand",
+      "price": 1675,
+      "confidence": "verified"
+    },
+    {
+      "tier": "16 vCPU / 64 GB",
+      "label": "1-year prepaid vs 1-yr RI",
+      "price": 1390,
+      "confidence": "verified"
+    },
+    {
+      "tier": "32 vCPU / 128 GB",
+      "label": "PAYG avg T2/T3 $5.43/h *",
+      "price": 3960,
+      "confidence": "verified"
+    },
+    {
+      "tier": "32 vCPU / 128 GB",
+      "label": "Monthly prepaid vs on-demand",
+      "price": 3351,
+      "confidence": "verified"
+    },
+    {
+      "tier": "32 vCPU / 128 GB",
+      "label": "1-year prepaid vs 1-yr RI",
+      "price": 2781,
+      "confidence": "verified"
+    }
+  ]
+}
